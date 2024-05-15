@@ -27,7 +27,9 @@
   "dependencies": {
     "@mantine/core": "^7.8.1",
     "@mantine/hooks": "^7.8.1",
+    "@mantine/notifications": "^7.9.1",
     "@tabler/icons-react": "^3.2.0",
+    "mantine-datatable": "^7.9.1",
     "react-router-dom": "^6.23.0"
   }
 }
