@@ -11,20 +11,20 @@
 */
 
 return [
-  'wp_kirk_slug_menu' => [
-    "page_title" => "WP Kirk Page title",
-    "menu_title" => "WP Kirk Menu title",
+  'wp_kirk_mantine_slug_menu' => [
+    'page_title' => 'WP Kirk Mantine',
+    'menu_title' => 'WP Kirk Mantine',
     'capability' => 'read',
-    'icon'       => 'dashicons-lightbulb',
-    'items'      => [
+    'icon' => 'dashicons-lightbulb',
+    'items' => [
       [
-        "page_title" => "Main View",
-        "menu_title" => "Main View",
+        'page_title' => 'Main View',
+        'menu_title' => 'Main View',
         'capability' => 'read',
-        'route'      => [
-          'get' => 'Dashboard\DashboardController@index'
+        'route' => [
+          'get' => 'Dashboard\DashboardController@index',
         ],
       ],
-    ]
-  ]
+    ],
+  ],
 ];

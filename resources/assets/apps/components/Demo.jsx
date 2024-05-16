@@ -1,10 +1,15 @@
 import { Center, Tabs, Box, Stack, Flex, Group, Grid, Burger, Paper, Container } from '@mantine/core';
 import { DataTable } from 'mantine-datatable';
 import { showNotification } from '@mantine/notifications';
+import { useAjax } from './use-ajax';
 
 import classes from './Demo.module.scss';
 
 export const Demo = () => {
+  const { data, error, isLoading } = useAjax();
+
+  console.log('!!!!', { data, error, isLoading });
+
   return (
     <Center w={'100%'} h={'80dvh'}>
       <Paper p={'md'} radius={'lg'} shadow="md" withBorder w={'50%'}>

@@ -4540,38 +4540,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Center/Center.mjs");
-/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Paper/Paper.mjs");
-/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Stack/Stack.mjs");
-/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Tabs/Tabs.mjs");
-/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/core/Box/Box.mjs");
+/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Center/Center.mjs");
+/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Paper/Paper.mjs");
+/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Stack/Stack.mjs");
+/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/Tabs/Tabs.mjs");
+/* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/core/Box/Box.mjs");
 /* harmony import */ var mantine_datatable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mantine-datatable */ "./node_modules/mantine-datatable/dist/index.mjs");
-/* harmony import */ var _mantine_notifications__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mantine/notifications */ "./node_modules/@mantine/notifications/esm/notifications.store.mjs");
-/* harmony import */ var _Demo_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Demo.module.scss */ "./resources/assets/apps/components/Demo.module.scss");
+/* harmony import */ var _mantine_notifications__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mantine/notifications */ "./node_modules/@mantine/notifications/esm/notifications.store.mjs");
+/* harmony import */ var _use_ajax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./use-ajax */ "./resources/assets/apps/components/use-ajax.js");
+/* harmony import */ var _Demo_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Demo.module.scss */ "./resources/assets/apps/components/Demo.module.scss");
+
 
 
 
 
 
 const Demo = () => {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_3__.Center, {
+  const {
+    data,
+    error,
+    isLoading
+  } = (0,_use_ajax__WEBPACK_IMPORTED_MODULE_2__.useAjax)();
+  console.log('!!!!', {
+    data,
+    error,
+    isLoading
+  });
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center, {
     w: '100%',
     h: '80dvh'
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Paper, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Paper, {
     p: 'md',
     radius: 'lg',
     shadow: "md",
     withBorder: true,
     w: '50%'
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Stack, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: _Demo_module_scss__WEBPACK_IMPORTED_MODULE_2__["default"].title
-  }, "Header"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Tabs, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Stack, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: _Demo_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].title
+  }, "Header"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs, {
     orientation: "vertical",
     variant: "outline",
     defaultValue: "gallery"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Tabs.List, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Tabs.Tab, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.List, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.Tab, {
     value: "gallery"
-  }, "Smart")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Tabs.Panel, {
+  }, "Smart")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.Panel, {
     value: "gallery",
     px: "md"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(GettingStartedExample, null))))));
@@ -4609,7 +4621,7 @@ function GettingStartedExample() {
       // this column has custom cell data rendering
       render: ({
         party
-      }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Box, {
+      }) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_8__.Box, {
         fw: 700,
         c: party === 'Democratic' ? 'blue' : 'red'
       }, party.slice(0, 3).toUpperCase())
@@ -4624,13 +4636,72 @@ function GettingStartedExample() {
         party,
         bornIn
       }
-    }) => (0,_mantine_notifications__WEBPACK_IMPORTED_MODULE_8__.showNotification)({
+    }) => (0,_mantine_notifications__WEBPACK_IMPORTED_MODULE_9__.showNotification)({
       title: `Clicked on ${name}`,
       message: `You clicked on ${name}, a ${party.toLowerCase()} president born in ${bornIn}`,
       withBorder: true
     })
   });
 }
+
+/***/ }),
+
+/***/ "./resources/assets/apps/components/use-ajax.js":
+/*!******************************************************!*\
+  !*** ./resources/assets/apps/components/use-ajax.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   useAjax: () => (/* binding */ useAjax)
+/* harmony export */ });
+/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swr */ "./node_modules/swr/dist/core/index.mjs");
+
+const post = async action => {
+  const res = await fetch(window.ajaxurl, {
+    method: 'POST',
+    body: new URLSearchParams({
+      action
+    }),
+    headers: {
+      // form-data url encoded
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  });
+  return res.json();
+};
+function useAjax() {
+  const {
+    data,
+    error,
+    isLoading
+  } = (0,swr__WEBPACK_IMPORTED_MODULE_0__["default"])('logged', post);
+  if (error) return {
+    error
+  };
+  if (isLoading) return {
+    isLoading
+  };
+
+  // render data
+  return {
+    data,
+    error: null,
+    isLoading: false
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/client-only/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/client-only/index.js ***!
+  \*******************************************/
+/***/ (() => {
+
+
 
 /***/ }),
 
@@ -11919,6 +11990,272 @@ var isFocusable = function isFocusable(node, options) {
 
 
 //# sourceMappingURL=index.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.development.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.development.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+/**
+ * @license React
+ * use-sync-external-store-shim.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (true) {
+  (function() {
+
+          'use strict';
+
+/* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+}
+          var React = __webpack_require__(/*! react */ "react");
+
+var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+function error(format) {
+  {
+    {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+      }
+
+      printWarning('error', format, args);
+    }
+  }
+}
+
+function printWarning(level, format, args) {
+  // When changing this logic, you might want to also
+  // update consoleWithStackDev.www.js as well.
+  {
+    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+    var stack = ReactDebugCurrentFrame.getStackAddendum();
+
+    if (stack !== '') {
+      format += '%s';
+      args = args.concat([stack]);
+    } // eslint-disable-next-line react-internal/safe-string-coercion
+
+
+    var argsWithFormat = args.map(function (item) {
+      return String(item);
+    }); // Careful: RN currently depends on this prefix
+
+    argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+    // breaks IE9: https://github.com/facebook/react/issues/13610
+    // eslint-disable-next-line react-internal/no-production-logging
+
+    Function.prototype.apply.call(console[level], console, argsWithFormat);
+  }
+}
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var objectIs = typeof Object.is === 'function' ? Object.is : is;
+
+// dispatch for CommonJS interop named imports.
+
+var useState = React.useState,
+    useEffect = React.useEffect,
+    useLayoutEffect = React.useLayoutEffect,
+    useDebugValue = React.useDebugValue;
+var didWarnOld18Alpha = false;
+var didWarnUncachedGetSnapshot = false; // Disclaimer: This shim breaks many of the rules of React, and only works
+// because of a very particular set of implementation details and assumptions
+// -- change any one of them and it will break. The most important assumption
+// is that updates are always synchronous, because concurrent rendering is
+// only available in versions of React that also have a built-in
+// useSyncExternalStore API. And we only use this shim when the built-in API
+// does not exist.
+//
+// Do not assume that the clever hacks used by this hook also work in general.
+// The point of this shim is to replace the need for hacks by other libraries.
+
+function useSyncExternalStore(subscribe, getSnapshot, // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+// React do not expose a way to check if we're hydrating. So users of the shim
+// will need to track that themselves and return the correct value
+// from `getSnapshot`.
+getServerSnapshot) {
+  {
+    if (!didWarnOld18Alpha) {
+      if (React.startTransition !== undefined) {
+        didWarnOld18Alpha = true;
+
+        error('You are using an outdated, pre-release alpha of React 18 that ' + 'does not support useSyncExternalStore. The ' + 'use-sync-external-store shim will not work correctly. Upgrade ' + 'to a newer pre-release.');
+      }
+    }
+  } // Read the current snapshot from the store on every render. Again, this
+  // breaks the rules of React, and only works here because of specific
+  // implementation details, most importantly that updates are
+  // always synchronous.
+
+
+  var value = getSnapshot();
+
+  {
+    if (!didWarnUncachedGetSnapshot) {
+      var cachedValue = getSnapshot();
+
+      if (!objectIs(value, cachedValue)) {
+        error('The result of getSnapshot should be cached to avoid an infinite loop');
+
+        didWarnUncachedGetSnapshot = true;
+      }
+    }
+  } // Because updates are synchronous, we don't queue them. Instead we force a
+  // re-render whenever the subscribed state changes by updating an some
+  // arbitrary useState hook. Then, during render, we call getSnapshot to read
+  // the current value.
+  //
+  // Because we don't actually use the state returned by the useState hook, we
+  // can save a bit of memory by storing other stuff in that slot.
+  //
+  // To implement the early bailout, we need to track some things on a mutable
+  // object. Usually, we would put that in a useRef hook, but we can stash it in
+  // our useState hook instead.
+  //
+  // To force a re-render, we call forceUpdate({inst}). That works because the
+  // new object always fails an equality check.
+
+
+  var _useState = useState({
+    inst: {
+      value: value,
+      getSnapshot: getSnapshot
+    }
+  }),
+      inst = _useState[0].inst,
+      forceUpdate = _useState[1]; // Track the latest getSnapshot function with a ref. This needs to be updated
+  // in the layout phase so we can access it during the tearing check that
+  // happens on subscribe.
+
+
+  useLayoutEffect(function () {
+    inst.value = value;
+    inst.getSnapshot = getSnapshot; // Whenever getSnapshot or subscribe changes, we need to check in the
+    // commit phase if there was an interleaved mutation. In concurrent mode
+    // this can happen all the time, but even in synchronous mode, an earlier
+    // effect may have mutated the store.
+
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+  }, [subscribe, value, getSnapshot]);
+  useEffect(function () {
+    // Check for changes right before subscribing. Subsequent changes will be
+    // detected in the subscription handler.
+    if (checkIfSnapshotChanged(inst)) {
+      // Force a re-render.
+      forceUpdate({
+        inst: inst
+      });
+    }
+
+    var handleStoreChange = function () {
+      // TODO: Because there is no cross-renderer API for batching updates, it's
+      // up to the consumer of this library to wrap their subscription event
+      // with unstable_batchedUpdates. Should we try to detect when this isn't
+      // the case and print a warning in development?
+      // The store changed. Check if the snapshot changed since the last time we
+      // read from the store.
+      if (checkIfSnapshotChanged(inst)) {
+        // Force a re-render.
+        forceUpdate({
+          inst: inst
+        });
+      }
+    }; // Subscribe to the store and return a clean-up function.
+
+
+    return subscribe(handleStoreChange);
+  }, [subscribe]);
+  useDebugValue(value);
+  return value;
+}
+
+function checkIfSnapshotChanged(inst) {
+  var latestGetSnapshot = inst.getSnapshot;
+  var prevValue = inst.value;
+
+  try {
+    var nextValue = latestGetSnapshot();
+    return !objectIs(prevValue, nextValue);
+  } catch (error) {
+    return true;
+  }
+}
+
+function useSyncExternalStore$1(subscribe, getSnapshot, getServerSnapshot) {
+  // Note: The shim does not use getServerSnapshot, because pre-18 versions of
+  // React do not expose a way to check if we're hydrating. So users of the shim
+  // will need to track that themselves and return the correct value
+  // from `getSnapshot`.
+  return getSnapshot();
+}
+
+var canUseDOM = !!(typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined');
+
+var isServerEnvironment = !canUseDOM;
+
+var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore;
+var useSyncExternalStore$2 = React.useSyncExternalStore !== undefined ? React.useSyncExternalStore : shim;
+
+exports.useSyncExternalStore = useSyncExternalStore$2;
+          /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+if (
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' &&
+  typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop ===
+    'function'
+) {
+  __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+}
+        
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/use-sync-external-store/shim/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/use-sync-external-store/shim/index.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ../cjs/use-sync-external-store-shim.development.js */ "./node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.development.js");
+}
 
 
 /***/ }),
@@ -35195,6 +35532,1300 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mantine_core__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @mantine/core */ "./node_modules/@mantine/core/esm/components/ScrollArea/ScrollArea.mjs");
 "use client";var[xt,ie]=(0,_mantine_core__WEBPACK_IMPORTED_MODULE_2__.createSafeContext)("useDataTableColumnsContext must be used within DataTableColumnProvider");var je=e=>{let{children:t,columnsOrder:o,setColumnsOrder:a,columnsToggle:n,setColumnsToggle:r,resetColumnsOrder:l,resetColumnsToggle:i,setColumnWidth:s,resetColumnsWidth:d}=e,[m,c]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(""),[p,u]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(xt,{value:{sourceColumn:m,setSourceColumn:c,targetColumn:p,setTargetColumn:u,columnsToggle:n,setColumnsToggle:r,swapColumns:()=>{if(!o||!a||!m||!p)return;let v=o.indexOf(m),y=o.indexOf(p);if(v!==-1&&y!==-1){let b=o.splice(v,1)[0];o.splice(y,0,b),a([...o])}},resetColumnsOrder:l,resetColumnsToggle:i,setColumnWidth:s,resetColumnsWidth:d},children:t})};function kt(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tr",{className:"mantine-datatable-empty-row",children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td",{})})}function Rt(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M12.983 8.978c3.955 -.182 7.017 -1.446 7.017 -2.978c0 -1.657 -3.582 -3 -8 -3c-1.661 0 -3.204 .19 -4.483 .515m-2.783 1.228c-.471 .382 -.734 .808 -.734 1.257c0 1.22 1.944 2.271 4.734 2.74"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M4 6v6c0 1.657 3.582 3 8 3c.986 0 1.93 -.067 2.802 -.19m3.187 -.82c1.251 -.53 2.011 -1.228 2.011 -1.99v-6"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M4 12v6c0 1.657 3.582 3 8 3c3.217 0 5.991 -.712 7.261 -1.74m.739 -3.26v-4"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M3 3l18 18"})]})}function Et({icon:e,text:t,pt:o,pb:a,active:n,children:r}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{pt:o,pb:a,className:"mantine-datatable-empty-state","data-active":n||void 0,children:r||(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:[e||(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{className:"mantine-datatable-empty-state-icon",children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Rt,{})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Text,{component:"div",size:"sm",c:"dimmed",children:t})]})})}var Nt=({key:e,columns:t=[],getInitialValueInEffect:o=!0})=>{let a=t&&t.map(b=>b.accessor)||[],n=t&&t.map(b=>({[b.accessor]:b.width??"initial"}))||[],r=t&&t.map(b=>({accessor:b.accessor,defaultToggle:b.defaultToggle||!0,toggleable:b.toggleable,toggled:b.defaultToggle===void 0?!0:b.defaultToggle})),[l,i]=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_6__.useLocalStorage)({key:`${e}-columns-order`,defaultValue:a,getInitialValueInEffect:o}),[s,d]=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_6__.useLocalStorage)({key:`${e}-columns-toggle`,defaultValue:r,getInitialValueInEffect:o}),[m,c]=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_6__.useLocalStorage)({key:`${e}-columns-width`,defaultValue:n,getInitialValueInEffect:o}),p=()=>i(a),u=()=>{d(r)},f=()=>c(n);return{effectiveColumns:(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>l?l.map(T=>t.find(C=>C.accessor===T)).map(T=>({...T,hidden:!s.find(C=>C.accessor===T?.accessor)?.toggled})).map(T=>({...T,width:m.find(C=>C[T?.accessor])?.[T?.accessor]})):t,[t,l,s,m]),setColumnsOrder:i,columnsOrder:l,resetColumnsOrder:p,columnsToggle:s,setColumnsToggle:d,resetColumnsToggle:u,columnsWidth:m,setColumnsWidth:c,setColumnWidth:(b,D)=>{let T=m.map(C=>C[b]?{[b]:D}:C);c(T)},resetColumnsWidth:f}};function oe(){let[e]=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_7__.useResizeObserver)(),{width:t,height:o}=e.current?.getBoundingClientRect()||{width:0,height:0};return{ref:e,width:t,height:o}}var Lt=typeof window<"u"?react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect:react__WEBPACK_IMPORTED_MODULE_1__.useEffect;function It(e){let[t,o]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),a=e?.join(":")||"";return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{o(null)},[a]),{lastSelectionChangeIndex:t,setLastSelectionChangeIndex:o}}function on(e,t){let o=()=>{t(e.map(n=>n.matches))},a=e.map(n=>{try{return n.addEventListener("change",o),()=>n.removeEventListener("change",o)}catch{return n.addListener(o),()=>n.removeListener(o)}});return()=>{a.forEach(n=>n())}}function an(e,t){return t||(typeof window<"u"&&"matchMedia"in window?e.map(o=>window.matchMedia(o).matches):e.map(()=>!1))}function Ht(e,t,{getInitialValueInEffect:o}={getInitialValueInEffect:!0}){let[a,n]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(o?t:an(e,t)),r=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{if("matchMedia"in window)return r.current=e.map(l=>window.matchMedia(l)),n(r.current.map(l=>l.matches)),on(r.current,l=>{n(l)})},[e]),a}function Wt(e){let t=(0,_mantine_core__WEBPACK_IMPORTED_MODULE_8__.useMantineTheme)(),o=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>e.map(n=>(typeof n=="function"?n(t):n)??""),[e,t]),a=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>e.map(()=>!0),[e]);return Ht(o,a)}function Q(e){let t=(0,_mantine_core__WEBPACK_IMPORTED_MODULE_8__.useMantineTheme)(),o=typeof e=="function"?e(t):e;return (0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_9__.useMediaQuery)(o||"",!0)}function se(e){let t=e.replace(/([a-z\d])([A-Z]+)/g,"$1 $2").replace(/\W|_/g," ").trim().toLowerCase();return`${t.charAt(0).toUpperCase()}${t.slice(1)}`}function At(e,t,o){return e.filter(a=>!t.map(o).includes(o(a)))}function Ee(e,t){return e.filter((o,a,n)=>a===n.findIndex(r=>t(o)===t(r)))}function tt(e,t){return t?t.match(/([^[.\]])+/g).reduce((a,n)=>a&&a[n],e):void 0}function R(e,t){return typeof t=="string"?tt(e,t):t(e)}function zt({rowExpansion:e,records:t,idAccessor:o}){let a=[];if(e&&t){let{trigger:i,allowMultiple:s,initiallyExpanded:d}=e;t&&i==="always"?a=t.map(m=>R(m,o)):d&&(a=t.filter((m,c)=>d({record:m,index:c})).map(m=>R(m,o)),s||(a=[a[0]]))}let n,r,l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(a);if(e){let{expandable:i,trigger:s,allowMultiple:d,collapseProps:m,content:c}=e;e.expanded?{recordIds:n,onRecordIdsChange:r}=e.expanded:[n,r]=l;let p=u=>r?.(n.filter(f=>f!==R(u,o)));return{expandOnClick:s!=="always"&&s!=="never",isRowExpanded:u=>s==="always"?!0:n.includes(R(u,o)),isExpandable:({record:u,index:f})=>i?i({record:u,index:f}):!0,expandRow:u=>{let f=R(u,o);r?.(d?[...n,f]:[f])},collapseRow:p,collapseProps:m,content:({record:u,index:f})=>()=>c({record:u,index:f,collapse:()=>p(u)})}}}function _t(e,t){let[o,a]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(e),[n,r]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(e),l=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_10__.useTimeout)(()=>a(!0),0),i=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_10__.useTimeout)(()=>r(!1),t||200);return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{e?(i.clear(),r(!0),l.start()):(l.clear(),a(!1),i.start())},[l,i,e]),{expanded:o,visible:n}}var de="mantine-datatable-nowrap",ce="mantine-datatable-ellipsis",F="mantine-datatable-pointer-cursor",Ne="mantine-datatable-context-menu-cursor",Bt="mantine-datatable-text-selection-disabled",U="mantine-datatable-text-align-left",$="mantine-datatable-text-align-center",K="mantine-datatable-text-align-right";function Gt({className:e,style:t,visibleMediaQuery:o,title:a,noWrap:n,ellipsis:r,textAlign:l,width:i}){return Q(o)?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTh,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])({[de]:n||r,[ce]:r,[U]:l==="left",[$]:l==="center",[K]:l==="right"},e),style:[{width:i,minWidth:i,maxWidth:i},t],children:a}):null}function Xt({shadowVisible:e}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTh,{className:"mantine-datatable-footer-selector-placeholder-cell","data-shadow-visible":e||void 0})}var Qt=(0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function({className:t,style:o,columns:a,defaultColumnProps:n,selectionVisible:r,selectorCellShadowVisible:l,scrollDiff:i},s){let d=i<0;return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTfoot,{ref:s,className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-footer",t),style:[{position:d?"relative":"sticky",bottom:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(d?i:0)},o],children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{children:[r&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Xt,{shadowVisible:l}),a.map(({hidden:m,...c})=>{if(m)return null;let{accessor:p,visibleMediaQuery:u,textAlign:f,width:v,footer:y,footerClassName:b,footerStyle:D,noWrap:T,ellipsis:C}={...n,...c};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Gt,{className:b,style:D,visibleMediaQuery:u,textAlign:f,width:v,title:y,noWrap:T,ellipsis:C},p)})]})})});function $t({group:{id:e,columns:t,title:o,textAlign:a,className:n,style:r}}){let l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>t.map(({visibleMediaQuery:d})=>d),[t]),i=Wt(l),s=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>t.filter(({hidden:d},m)=>!d&&i?.[m]).length,[t,i]);return s>0?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTh,{colSpan:s,className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-column-group-header-cell",{[U]:a==="left",[$]:a==="center",[K]:a==="right"},n),style:r,children:o??se(e)}):null}function Jt(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z"})]})}function Yt(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M20 3h-16a1 1 0 0 0 -1 1v2.227l.008 .223a3 3 0 0 0 .772 1.795l4.22 4.641v8.114a1 1 0 0 0 1.316 .949l6 -2l.108 -.043a1 1 0 0 0 .576 -.906v-6.586l4.121 -4.12a3 3 0 0 0 .879 -2.123v-2.171a1 1 0 0 0 -1 -1z",strokeWidth:"0",fill:"currentColor"})]})}function qt({children:e,isActive:t}){let[o,{close:a,toggle:n}]=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_13__.useDisclosure)(!1);return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_14__.Popover,{withArrow:!0,withinPortal:!0,shadow:"md",opened:o,onClose:a,trapFocus:!0,children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_15__.PopoverTarget,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_16__.ActionIcon,{className:"mantine-datatable-header-cell-filter-action-icon","data-active":t||void 0,size:"sm",variant:"default",onClick:l=>{l.preventDefault(),n()},children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(t?Yt:Jt,{})})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_17__.PopoverDropdown,{onClick:l=>l.stopPropagation(),children:typeof e=="function"?e({close:a}):e})]})}var jt=e=>{let{accessor:t,columnRef:o}=e,a=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null),[n,r]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),{setColumnWidth:l}=ie(),i=c=>{c.preventDefault(),c.stopPropagation(),document.addEventListener("mousemove",s),document.addEventListener("mouseup",d),document.body.style.cursor="col-resize"},s=c=>{if(!o.current)return;let p=c.clientX-o.current.getBoundingClientRect().right,f=`${o.current.getBoundingClientRect().width+p}px`;o.current.style.width=f,l(t,o.current.style.width),r(-p)},d=()=>{o.current&&(document.removeEventListener("mousemove",s),document.removeEventListener("mouseup",d),document.body.style.cursor="initial",l(t,o.current.style.width),r(0))};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{ref:a,onClick:c=>c.stopPropagation(),onMouseDown:i,onDoubleClick:()=>{o.current&&(o.current.style.maxWidth="initial",o.current.style.minWidth="initial",o.current.style.width="initial",l(t,"initial"))},className:"mantine-datatable-header-resizable-handle",style:{right:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(n)}})};function eo(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M12 5l0 14"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M16 9l-4 -4"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M8 9l4 -4"})]})}function to(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M8 7l4 -4l4 4"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M8 17l4 4l4 -4"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M12 3l0 18"})]})}function oo(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M9 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M9 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M9 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M15 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M15 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M15 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"})]})}function ao(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M18 6l-12 12"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M6 6l12 12"})]})}function lo({className:e,style:t,accessor:o,visibleMediaQuery:a,title:n,sortable:r,draggable:l,toggleable:i,resizable:s,sortIcons:d,textAlign:m,width:c,sortStatus:p,onSortStatusChange:u,filter:f,filtering:v}){let{setSourceColumn:y,setTargetColumn:b,swapColumns:D,setColumnsToggle:T}=ie(),[C,E]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1),I=(0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);if(!Q(a))return null;let w=n??se(o),O=typeof w=="string"?w:void 0,k=r&&u?S=>{S?.defaultPrevented||u({columnAccessor:o,direction:p?.columnAccessor===o?p.direction==="asc"?"desc":"asc":p?.direction??"asc"})}:void 0,_=S=>{S.stopPropagation(),y(o),E(!1)},M=S=>{S.preventDefault(),b(o),E(!0)},h=()=>{b(o),E(!1),D()},x=()=>{E(!0)},N=()=>{E(!1)},W=S=>{S.stopPropagation(),T(Z=>Z.map(B=>B.accessor===o?{...B,toggled:!1}:B))};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTh,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])({"mantine-datatable-header-cell-sortable":r,"mantine-datatable-header-cell-toggleable":i,"mantine-datatable-header-cell-resizable":s},e),style:[{width:c,...s?{minWidth:"1px"}:{minWidth:c,maxWidth:c}},t],role:r?"button":void 0,tabIndex:r?0:void 0,onClick:k,onKeyDown:S=>S.key==="Enter"&&k?.(),ref:I,children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_18__.Group,{className:"mantine-datatable-header-cell-sortable-group",justify:"space-between",wrap:"nowrap",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_19__.Flex,{align:"center",w:"100%",className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])({"mantine-datatable-header-cell-draggable":l,"mantine-datatable-header-cell-drag-over":C}),draggable:l,onDragStart:l?_:void 0,onDragEnter:l?x:void 0,onDragOver:l?M:void 0,onDrop:l?h:void 0,onDragLeave:l?N:void 0,children:[l?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{role:"img","aria-label":"Drag column",children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_16__.ActionIcon,{className:"mantine-datatable-header-cell-draggable-action-icon",variant:"subtle",size:"xs",onClick:S=>{S.stopPropagation()},children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(oo,{})})}):null,(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_20__.Box,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-header-cell-sortable-text",{[U]:m==="left",[$]:m==="center",[K]:m==="right"},de,ce),title:O,children:w})]}),i?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{className:"mantine-datatable-header-cell-toggleable-icon",role:"img","aria-label":"Toggle column",children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_16__.ActionIcon,{size:"xs",variant:"light",onClick:W,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(ao,{})})}):null,r||p?.columnAccessor===o?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:p?.columnAccessor===o?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-header-cell-sortable-icon",{"mantine-datatable-header-cell-sortable-icon-reversed":p.direction==="desc"}),role:"img","aria-label":`Sorted ${p.direction==="desc"?"descending":"ascending"}`,children:d?.sorted||(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(eo,{})}):(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{className:"mantine-datatable-header-cell-sortable-unsorted-icon",role:"img","aria-label":"Not sorted",children:d?.unsorted||(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(to,{})})}):null,f?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(qt,{isActive:!!v,children:f}):null]}),s?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(jt,{accessor:o,columnRef:I}):null]})}var io=(0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function({className:t,style:o,trigger:a,shadowVisible:n,checked:r,indeterminate:l,checkboxProps:i,onChange:s,rowSpan:d},m){let c=!i.disabled;return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTh,{ref:m,className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-header-selector-cell",{[F]:a==="cell"&&c},t),style:o,rowSpan:d,"data-shadow-visible":n||void 0,onClick:a==="cell"&&c?s:void 0,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_21__.Checkbox,{classNames:c?{input:F}:void 0,checked:r,indeterminate:l,onChange:s,...i,disabled:!(s||i.onChange)||i.disabled})})});var co=(0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function({selectionColumnHeaderRef:t,className:o,style:a,sortStatus:n,sortIcons:r,onSortStatusChange:l,columns:i,defaultColumnProps:s,groups:d,selectionTrigger:m,selectionVisible:c,selectionChecked:p,selectionIndeterminate:u,onSelectionChange:f,selectionCheckboxProps:v,selectorCellShadowVisible:y,selectionColumnClassName:b,selectionColumnStyle:D},T){let C=c?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(io,{ref:t,className:b,style:D,trigger:m,shadowVisible:y,checked:p,indeterminate:u,checkboxProps:v,onChange:f,rowSpan:d?2:void 0}):null,{columnsToggle:E,setColumnsToggle:I}=ie(),[w,O]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1),k=i.some(h=>h.toggleable),_=k?Object.fromEntries(i.map(({accessor:h,title:x})=>[h,x??se(String(h))])):void 0,M=(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableThead,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-header",o),style:a,ref:T,onContextMenu:k?h=>{h.preventDefault(),O(x=>!x)}:void 0,children:[d&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{children:[C,d.map(h=>(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)($t,{group:h},h.id))]}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{children:[!d&&C,i.map(({hidden:h,...x},N)=>{if(h)return null;let{accessor:W,visibleMediaQuery:S,textAlign:Z,width:B,title:me,sortable:ue,draggable:Y,toggleable:pe,resizable:be,titleClassName:G,titleStyle:Ge,filter:Xe,filtering:Qe}={...s,...x};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(lo,{accessor:W,className:G,style:Ge,visibleMediaQuery:S,textAlign:Z,width:B,title:me,sortable:ue,draggable:Y,toggleable:pe,resizable:be&&N<i.length-1,sortStatus:n,sortIcons:r,onSortStatusChange:l,filter:Xe,filtering:Qe},W)})]})]});return k?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_14__.Popover,{position:"bottom",withArrow:!0,shadow:"md",opened:w,onChange:O,children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_15__.PopoverTarget,{children:M}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_17__.PopoverDropdown,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_22__.Stack,{children:E.filter(h=>h.toggleable).map(h=>(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_18__.Group,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_21__.Checkbox,{classNames:{label:"mantine-datatable-header-column-toggle-checkbox-label"},size:"xs",label:_[h.accessor],checked:h.toggled,onChange:x=>{I(E.map(N=>N.accessor===h.accessor?{...N,toggled:x.currentTarget.checked}:N))}})},h.accessor))})})]}):M});function uo({pt:e,pb:t,fetching:o,customContent:a,backgroundBlur:n,size:r,type:l,color:i}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center,{pt:e,pb:t,className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-loader",{"mantine-datatable-loader-fetching":o}),style:[{backdropFilter:n?`blur(${n}px)`:void 0}],children:o&&(a||(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_23__.Loader,{size:r,type:l,color:i}))})}function P(e,t,o){return e?(0,_mantine_core__WEBPACK_IMPORTED_MODULE_24__.parseThemeColor)({color:typeof e=="object"?e[o]:e,theme:t}).value:void 0}function po({theme:e,c:t,backgroundColor:o,borderColor:a,rowBorderColor:n,stripedColor:r,highlightOnHoverColor:l}){return{"--mantine-datatable-color-light":P(t,e,"light"),"--mantine-datatable-color-dark":P(t,e,"dark"),"--mantine-datatable-background-color-light":P(o,e,"light"),"--mantine-datatable-background-color-dark":P(o,e,"dark"),"--mantine-datatable-border-color-light":P(a,e,"light"),"--mantine-datatable-border-color-dark":P(a,e,"dark"),"--mantine-datatable-row-border-color-light":P(n,e,"light"),"--mantine-datatable-row-border-color-dark":P(n,e,"dark"),"--mantine-datatable-striped-color-light":P(r,e,"light"),"--mantine-datatable-striped-color-dark":P(r,e,"dark"),"--mantine-datatable-highlight-on-hover-color-light":P(l,e,"light"),"--mantine-datatable-highlight-on-hover-color-dark":P(l,e,"dark")}}function ze({theme:e,paginationActiveTextColor:t,paginationActiveBackgroundColor:o}){return{"--mantine-datatable-pagination-active-text-color-light":P(t,e,"light"),"--mantine-datatable-pagination-active-text-color-dark":P(t,e,"dark"),"--mantine-datatable-pagination-active-background-color-light":P(o,e,"light"),"--mantine-datatable-pagination-active-background-color-dark":P(o,e,"dark")}}function bo({theme:e,color:t,backgroundColor:o}){return{"--mantine-datatable-row-color-light":P(t,e,"light"),"--mantine-datatable-row-color-dark":P(t,e,"dark"),"--mantine-datatable-row-background-color-light":P(o,e,"light"),"--mantine-datatable-row-background-color-dark":P(o,e,"dark")}}function fo(){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",strokeWidth:"2",stroke:"currentColor",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{stroke:"none",d:"M0 0h24v24H0z",fill:"none"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M8 9l4 -4l4 4"}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path",{d:"M16 15l-4 4l-4 -4"})]})}var go={xs:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(22),sm:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(26),md:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(32),lg:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(38),xl:(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(44)};function Co({size:e,label:t,values:o,value:a,activeTextColor:n,activeBackgroundColor:r,onChange:l}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_18__.Group,{gap:"xs",children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Text,{component:"div",size:e,children:t}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_25__.Menu,{withinPortal:!0,withArrow:!0,classNames:{arrow:"mantine-datatable-page-size-selector-menu-arrow"},children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_26__.MenuTarget,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_27__.Button,{size:e,variant:"default",classNames:{section:"mantine-datatable-page-size-selector-button-icon"},rightSection:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(fo,{}),style:[{fontWeight:"normal"},i=>({height:go[e],paddingLeft:i.spacing[e],paddingRight:i.spacing[e]})],children:a})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_28__.MenuDropdown,{children:o.map(i=>{let s=i===a;return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_29__.MenuItem,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])({"mantine-datatable-page-size-selector-active":s}),style:[{height:go[e]},s&&(n||r)?d=>ze({theme:d,paginationActiveTextColor:n,paginationActiveBackgroundColor:r}):void 0],disabled:s,onClick:()=>l(i),children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Text,{component:"div",size:e,children:i})},i)})})]})]})}var Do=(0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function({className:t,style:o,fetching:a,page:n,onPageChange:r,paginationWithEdges:l,paginationActiveTextColor:i,paginationActiveBackgroundColor:s,paginationSize:d,loadingText:m,noRecordsText:c,paginationText:p,totalRecords:u,recordsPerPage:f,onRecordsPerPageChange:v,recordsPerPageLabel:y,recordsPerPageOptions:b,recordsLength:D,horizontalSpacing:T,paginationWrapBreakpoint:C,getPaginationControlProps:E},I){let w;if(a)w=m;else if(!u)w=c;else{let k=(n-1)*f+1,_=k+D-1;w=p({from:k,to:_,totalRecords:u})}let O=Q(({breakpoints:k})=>`(min-width: ${typeof C=="number"?`${(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(C)}rem`:k[C]||C})`);return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_20__.Box,{ref:I,px:T??"xs",py:"xs",className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-pagination",t),style:[{flexDirection:O?"row":"column"},o],children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_5__.Text,{component:"div",className:"mantine-datatable-pagination-text",size:d,children:w}),b&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Co,{activeTextColor:i,activeBackgroundColor:s,size:d,label:y,values:b,value:f,onChange:v}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_30__.Pagination,{classNames:{root:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-pagination-pages",{"mantine-datatable-pagination-pages-fetching":a||!D}),control:"mantine-datatable-pagination-pages-control"},style:i||s?k=>ze({theme:k,paginationActiveTextColor:i,paginationActiveBackgroundColor:s}):void 0,withEdges:l,value:n,onChange:r,size:d,total:Math.ceil(u/f),getControlProps:E})]})});function wo({className:e,style:t,visibleMediaQuery:o,record:a,index:n,onClick:r,onDoubleClick:l,onContextMenu:i,noWrap:s,ellipsis:d,textAlign:m,width:c,accessor:p,render:u,defaultRender:f,customCellAttributes:v}){return Q(o)?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTd,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])({[de]:s||d,[ce]:d,[F]:r||l,[Ne]:i,[U]:m==="left",[$]:m==="center",[K]:m==="right"},e),style:[{width:c,minWidth:c,maxWidth:c},t],onClick:r,onDoubleClick:l,onContextMenu:i,...v?.(a,n),children:u?u(a,n):f?f(a,n,p):tt(a,p)}):null}function Po({open:e,colSpan:t,content:o,collapseProps:a}){let{expanded:n,visible:r}=_t(e,a?.transitionDuration);return r?(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTd,{className:"mantine-datatable-row-expansion-cell",colSpan:t,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_31__.Collapse,{in:n,...a,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{className:"mantine-datatable-row-expansion-cell-content",children:o()})})})})]}):null}function vo({className:e,style:t,record:o,index:a,trigger:n,onChange:r,withRightShadow:l,checkboxProps:i,getCheckboxProps:s,...d}){let m={...i,...s(o,a)},c=!d.disabled&&!m.disabled,p=u=>{u.stopPropagation(),n==="cell"&&c&&r?.(u)};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTd,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-row-selector-cell",{[F]:n==="cell"&&c},e),style:t,"data-shadow-visible":l||void 0,onClick:p,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_21__.Checkbox,{classNames:c?{input:F}:void 0,onChange:r,...d,...m})})}function ko({record:e,index:t,columns:o,defaultColumnProps:a,defaultColumnRender:n,selectionTrigger:r,selectionVisible:l,selectionChecked:i,onSelectionChange:s,isRecordSelectable:d,selectionCheckboxProps:m,getSelectionCheckboxProps:c,onClick:p,onDoubleClick:u,onContextMenu:f,onCellClick:v,onCellDoubleClick:y,onCellContextMenu:b,expansion:D,customAttributes:T,color:C,backgroundColor:E,className:I,style:w,selectorCellShadowVisible:O,selectionColumnClassName:k,selectionColumnStyle:_}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_11__.TableTr,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-row",{[F]:D?.isExpandable({record:e,index:t})&&(p||u||D?.expandOnClick)},{[Ne]:f},typeof I=="function"?I(e,t):I),"data-selected":i||void 0,onClick:M=>{if(D){let{isExpandable:h,isRowExpanded:x,expandOnClick:N,expandRow:W,collapseRow:S}=D;h({record:e,index:t})&&N&&(x(e)?S(e):W(e))}p?.({event:M,record:e,index:t})},onDoubleClick:u?M=>u({event:M,record:e,index:t}):void 0,onContextMenu:f?M=>f({event:M,record:e,index:t}):void 0,style:[C||E?M=>{let h=C?.(e,t),x=E?.(e,t);return bo({theme:M,color:h,backgroundColor:x})}:void 0,w?.(e,t)],...T?.(e,t),children:[l&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(vo,{className:k,style:_,record:e,index:t,trigger:r,withRightShadow:O,checked:i,disabled:!s||(d?!d(e,t):!1),onChange:s,checkboxProps:m,getCheckboxProps:c}),o.map(({hidden:M,...h},x)=>{if(M)return null;let{accessor:N,visibleMediaQuery:W,textAlign:S,noWrap:Z,ellipsis:B,width:me,render:ue,cellsClassName:Y,cellsStyle:pe,customCellAttributes:be}={...a,...h};return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(wo,{className:typeof Y=="function"?Y(e,t):Y,style:pe?.(e,t),visibleMediaQuery:W,record:e,index:t,onClick:v?G=>v({event:G,record:e,index:t,column:h,columnIndex:x}):void 0,onDoubleClick:y?G=>y({event:G,record:e,index:t,column:h,columnIndex:x}):void 0,onContextMenu:b?G=>b({event:G,record:e,index:t,column:h,columnIndex:x}):void 0,accessor:N,textAlign:S,noWrap:Z,ellipsis:B,width:me,render:ue,defaultRender:n,customCellAttributes:be},N)})]}),D&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Po,{colSpan:o.filter(({hidden:M})=>!M).length+(l?1:0),open:D.isRowExpanded(e),content:D.content({record:e,index:t}),collapseProps:D.collapseProps})]})}function No({topShadowVisible:e,leftShadowVisible:t,leftShadowBehind:o,rightShadowVisible:a,rightShadowBehind:n,bottomShadowVisible:r,headerHeight:l,footerHeight:i,onScrollPositionChange:s,children:d,viewportRef:m,scrollAreaProps:c}){return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_32__.ScrollArea,{...c,viewportRef:m,classNames:{root:"mantine-datatable-scroll-area",scrollbar:"mantine-datatable-scroll-area-scrollbar",thumb:"mantine-datatable-scroll-area-thumb",corner:"mantine-datatable-scroll-area-corner"},onScrollPositionChange:s,children:[d,(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_20__.Box,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-scroll-area-shadow","mantine-datatable-scroll-area-top-shadow",{"mantine-datatable-scroll-area-shadow-visible":e}),style:{top:l?(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(l):0}}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-scroll-area-shadow","mantine-datatable-scroll-area-left-shadow",{"mantine-datatable-scroll-area-shadow-visible":t,"mantine-datatable-scroll-area-shadow-behind":o})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-scroll-area-shadow","mantine-datatable-scroll-area-right-shadow",{"mantine-datatable-scroll-area-shadow-visible":a,"mantine-datatable-scroll-area-shadow-behind":n})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mantine_core__WEBPACK_IMPORTED_MODULE_20__.Box,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-scroll-area-shadow","mantine-datatable-scroll-area-bottom-shadow",{"mantine-datatable-scroll-area-shadow-visible":r}),style:{bottom:i?(0,_mantine_core__WEBPACK_IMPORTED_MODULE_12__.rem)(i+1):0}})]})}function Xl({withTableBorder:e,borderRadius:t,textSelectionDisabled:o,height:a="100%",minHeight:n,maxHeight:r,shadow:l,verticalAlign:i="center",fetching:s,columns:d,storeColumnsKey:m="mantine-datatable",groups:c,pinFirstColumn:p,pinLastColumn:u,defaultColumnProps:f,defaultColumnRender:v,idAccessor:y="id",records:b,selectionTrigger:D="checkbox",selectedRecords:T,onSelectedRecordsChange:C,selectionColumnClassName:E,selectionColumnStyle:I,isRecordSelectable:w,selectionCheckboxProps:O,allRecordsSelectionCheckboxProps:k={"aria-label":"Select all records"},getRecordSelectionCheckboxProps:_=(H,q)=>({"aria-label":`Select record ${q+1}`}),sortStatus:M,sortIcons:h,onSortStatusChange:x,horizontalSpacing:N,page:W,onPageChange:S,totalRecords:Z,recordsPerPage:B,onRecordsPerPageChange:me,recordsPerPageOptions:ue,recordsPerPageLabel:Y="Records per page",paginationWithEdges:pe,paginationActiveTextColor:be,paginationActiveBackgroundColor:G,paginationSize:Ge="sm",paginationText:Xe=({from:H,to:q,totalRecords:j})=>`${H} - ${q} / ${j}`,paginationWrapBreakpoint:Qe="sm",getPaginationControlProps:Oo=H=>H==="previous"?{"aria-label":"Previous page"}:H==="next"?{"aria-label":"Next page"}:{},loaderBackgroundBlur:Wo,customLoader:Ao,loaderSize:zo,loaderType:Vo,loaderColor:Fo,loadingText:_o="...",emptyState:Bo,noRecordsText:st="No records",noRecordsIcon:Go,highlightOnHover:Xo,striped:Qo,noHeader:Uo,onRowClick:$o,onRowDoubleClick:Ko,onRowContextMenu:Jo,onCellClick:Zo,onCellDoubleClick:Yo,onCellContextMenu:qo,onScroll:dt,onScrollToTop:ct,onScrollToBottom:mt,onScrollToLeft:ut,onScrollToRight:pt,c:jo,backgroundColor:ea,borderColor:ta,rowBorderColor:oa,stripedColor:aa,highlightOnHoverColor:na,rowColor:la,rowBackgroundColor:ra,rowExpansion:ia,rowClassName:sa,rowStyle:da,customRowAttributes:ca,scrollViewportRef:ma,scrollAreaProps:ua,tableRef:pa,bodyRef:ba,m:fa,my:Ta,mx:ga,mt:ha,mb:Ca,ml:ya,mr:Da,className:wa,classNames:fe,style:Sa,styles:Te,...bt}){let{ref:H,width:q,height:j}=oe(),ge=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>c?.flatMap(g=>g.columns)??d,[d,c]),ft=Nt({key:m,columns:ge}),{ref:Pa,height:Ue}=oe(),{ref:xa,width:$e,height:he}=oe(),{ref:va,height:Ma}=oe(),{ref:ka,height:Tt}=oe(),{ref:Ra,width:Ea}=oe(),Na=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_33__.useMergedRef)(xa,pa),La=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_33__.useMergedRef)(H,ma),[Ke,gt]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!0),[Je,ht]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!0),[Ce,Ct]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!0),[Pe,yt]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!0),Ia=zt({rowExpansion:ia,records:b,idAccessor:y}),Ze=(0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(()=>{let g=H.current?.scrollTop||0,X=H.current?.scrollLeft||0;if(s||he<=j)gt(!0),ht(!0);else{let A=g===0,z=he-g-j<1;gt(A),ht(z),A&&A!==Ke&&ct?.(),z&&z!==Je&&mt?.()}if(s||$e===q)Ct(!0),yt(!0);else{let A=X===0,z=$e-X-q<1;Ct(A),yt(z),A&&A!==Ce&&ut?.(),z&&z!==Pe&&pt?.()}},[s,mt,ut,pt,ct,j,H,q,Je,Ce,Pe,Ke,he,$e]);Lt(Ze,[Ze]);let Dt=(0,_mantine_hooks__WEBPACK_IMPORTED_MODULE_34__.useDebouncedCallback)(Ze,50),Ha=(0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(g=>{dt?.(g),Dt()},[Dt,dt]),Oa=(0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(g=>{H.current?.scrollTo({top:0,left:0}),S(g)},[S,H]),xe=b?.length,wt=b?.map(g=>R(g,y)),le=!!T,ye=T?.map(g=>R(g,y)),St=wt!==void 0&&ye!==void 0&&ye.length>0,Ye=w?b?.filter(w):b,ve=Ye?.map(g=>R(g,y)),Me=St&&ve.every(g=>ye.includes(g)),Wa=St&&ve.some(g=>ye.includes(g)),Aa=(0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(()=>{T&&C&&C(Me?T.filter(g=>!ve.includes(R(g,y))):Ee([...T,...Ye],g=>R(g,y)))},[Me,y,C,ve,Ye,T]),{lastSelectionChangeIndex:ke,setLastSelectionChangeIndex:za}=It(wt),qe=le&&!Ce&&!p;return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(je,{...ft,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_20__.Box,{...{m:fa,my:Ta,mx:ga,mt:ha,mb:Ca,ml:ya,mr:Da},className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable",{"mantine-datatable-with-border":e},wa,fe?.root),style:[g=>({...po({theme:g,c:jo,backgroundColor:ea,borderColor:ta,rowBorderColor:oa,stripedColor:aa,highlightOnHoverColor:na}),borderRadius:g.radius[t]||t,boxShadow:g.shadows[l]||l,height:a,minHeight:n,maxHeight:r}),Sa,Te?.root],children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(No,{viewportRef:La,topShadowVisible:!Ke,leftShadowVisible:!Ce,leftShadowBehind:le||!!p,rightShadowVisible:!Pe,rightShadowBehind:u,bottomShadowVisible:!Je,headerHeight:Ue,footerHeight:Ma,onScrollPositionChange:Ha,scrollAreaProps:ua,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mantine_core__WEBPACK_IMPORTED_MODULE_35__.Table,{ref:Na,horizontalSpacing:N,className:(0,clsx__WEBPACK_IMPORTED_MODULE_0__["default"])("mantine-datatable-table",{[Bt]:o,"mantine-datatable-vertical-align-top":i==="top","mantine-datatable-vertical-align-bottom":i==="bottom","mantine-datatable-last-row-border-bottom-visible":bt.withRowBorders&&he<j,"mantine-datatable-pin-last-column":u,"mantine-datatable-pin-last-column-scrolled":!Pe&&u,"mantine-datatable-selection-column-visible":le,"mantine-datatable-pin-first-column":p,"mantine-datatable-pin-first-column-scrolled":!Ce&&p},fe?.table),style:{...Te?.table,"--mantine-datatable-selection-column-width":`${Ea}px`},"data-striped":xe&&Qo||void 0,"data-highlight-on-hover":Xo||void 0,...bt,children:[Uo?null:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(je,{...ft,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(co,{ref:Pa,selectionColumnHeaderRef:Ra,className:fe?.header,style:Te?.header,columns:ge,defaultColumnProps:f,groups:c,sortStatus:M,sortIcons:h,onSortStatusChange:x,selectionTrigger:D,selectionVisible:le,selectionChecked:Me,selectionIndeterminate:Wa&&!Me,onSelectionChange:Aa,selectionCheckboxProps:{...O,...k},selectorCellShadowVisible:qe,selectionColumnClassName:E,selectionColumnStyle:I})}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tbody",{ref:ba,children:xe?b.map((g,X)=>{let A=R(g,y),z=ye?.includes(A)||!1,Pt;return C&&T&&(Pt=Va=>{if(Va.nativeEvent.shiftKey&&ke!==null){let re=b.filter(X>ke?(ee,te)=>te>=ke&&te<=X&&(w?w(ee,te):!0):(ee,te)=>te>=X&&te<=ke&&(w?w(ee,te):!0));C(z?At(T,re,ee=>R(ee,y)):Ee([...T,...re],ee=>R(ee,y)))}else C(z?T.filter(re=>R(re,y)!==A):Ee([...T,g],re=>R(re,y)));za(X)}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(ko,{record:g,index:X,columns:ge,defaultColumnProps:f,defaultColumnRender:v,selectionTrigger:D,selectionVisible:le,selectionChecked:z,onSelectionChange:Pt,isRecordSelectable:w,selectionCheckboxProps:O,getSelectionCheckboxProps:_,onClick:$o,onDoubleClick:Ko,onCellClick:Zo,onCellDoubleClick:Yo,onContextMenu:Jo,onCellContextMenu:qo,expansion:Ia,color:la,backgroundColor:ra,className:sa,style:da,customAttributes:ca,selectorCellShadowVisible:qe,selectionColumnClassName:E,selectionColumnStyle:I},A)}):(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(kt,{})}),ge.some(({footer:g})=>g)&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Qt,{ref:va,className:fe?.footer,style:Te?.footer,columns:ge,defaultColumnProps:f,selectionVisible:le,selectorCellShadowVisible:qe,scrollDiff:he-j})]})}),W&&(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Do,{ref:ka,className:fe?.pagination,style:Te?.pagination,horizontalSpacing:N,fetching:s,page:W,onPageChange:Oa,totalRecords:Z,recordsPerPage:B,onRecordsPerPageChange:me,recordsPerPageOptions:ue,recordsPerPageLabel:Y,paginationWithEdges:pe,paginationActiveTextColor:be,paginationActiveBackgroundColor:G,paginationSize:Ge,paginationText:Xe,paginationWrapBreakpoint:Qe,getPaginationControlProps:Oo,noRecordsText:st,loadingText:_o,recordsLength:xe}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(uo,{pt:Ue,pb:Tt,fetching:s,backgroundBlur:Wo,customContent:Ao,size:zo,type:Vo,color:Fo}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Et,{pt:Ue,pb:Tt,icon:Go,text:st,active:!s&&!xe,children:Bo})]})})}
 //# sourceMappingURL=index.mjs.map
+
+/***/ }),
+
+/***/ "./node_modules/swr/dist/_internal/index.mjs":
+/*!***************************************************!*\
+  !*** ./node_modules/swr/dist/_internal/index.mjs ***!
+  \***************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   INFINITE_PREFIX: () => (/* binding */ INFINITE_PREFIX),
+/* harmony export */   IS_REACT_LEGACY: () => (/* binding */ IS_REACT_LEGACY),
+/* harmony export */   IS_SERVER: () => (/* binding */ IS_SERVER),
+/* harmony export */   OBJECT: () => (/* binding */ OBJECT),
+/* harmony export */   SWRConfig: () => (/* binding */ SWRConfig),
+/* harmony export */   SWRGlobalState: () => (/* binding */ SWRGlobalState),
+/* harmony export */   UNDEFINED: () => (/* binding */ UNDEFINED),
+/* harmony export */   cache: () => (/* binding */ cache),
+/* harmony export */   compare: () => (/* binding */ compare),
+/* harmony export */   createCacheHelper: () => (/* binding */ createCacheHelper),
+/* harmony export */   defaultConfig: () => (/* binding */ defaultConfig),
+/* harmony export */   defaultConfigOptions: () => (/* binding */ defaultConfigOptions),
+/* harmony export */   getTimestamp: () => (/* binding */ getTimestamp),
+/* harmony export */   hasRequestAnimationFrame: () => (/* binding */ hasRequestAnimationFrame),
+/* harmony export */   initCache: () => (/* binding */ initCache),
+/* harmony export */   internalMutate: () => (/* binding */ internalMutate),
+/* harmony export */   isDocumentDefined: () => (/* binding */ isDocumentDefined),
+/* harmony export */   isFunction: () => (/* binding */ isFunction),
+/* harmony export */   isPromiseLike: () => (/* binding */ isPromiseLike),
+/* harmony export */   isUndefined: () => (/* binding */ isUndefined),
+/* harmony export */   isWindowDefined: () => (/* binding */ isWindowDefined),
+/* harmony export */   mergeConfigs: () => (/* binding */ mergeConfigs),
+/* harmony export */   mergeObjects: () => (/* binding */ mergeObjects),
+/* harmony export */   mutate: () => (/* binding */ mutate),
+/* harmony export */   noop: () => (/* binding */ noop),
+/* harmony export */   normalize: () => (/* binding */ normalize),
+/* harmony export */   preload: () => (/* binding */ preload),
+/* harmony export */   preset: () => (/* binding */ preset),
+/* harmony export */   rAF: () => (/* binding */ rAF),
+/* harmony export */   revalidateEvents: () => (/* binding */ events),
+/* harmony export */   serialize: () => (/* binding */ serialize),
+/* harmony export */   slowConnection: () => (/* binding */ slowConnection),
+/* harmony export */   stableHash: () => (/* binding */ stableHash),
+/* harmony export */   subscribeCallback: () => (/* binding */ subscribeCallback),
+/* harmony export */   useIsomorphicLayoutEffect: () => (/* binding */ useIsomorphicLayoutEffect),
+/* harmony export */   useSWRConfig: () => (/* binding */ useSWRConfig),
+/* harmony export */   withArgs: () => (/* binding */ withArgs),
+/* harmony export */   withMiddleware: () => (/* binding */ withMiddleware)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+
+// Shared state between server components and client components
+const noop = ()=>{};
+// Using noop() as the undefined value as undefined can be replaced
+// by something else. Prettier ignore and extra parentheses are necessary here
+// to ensure that tsc doesn't remove the __NOINLINE__ comment.
+// prettier-ignore
+const UNDEFINED = /*#__NOINLINE__*/ noop();
+const OBJECT = Object;
+const isUndefined = (v)=>v === UNDEFINED;
+const isFunction = (v)=>typeof v == 'function';
+const mergeObjects = (a, b)=>({
+        ...a,
+        ...b
+    });
+const isPromiseLike = (x)=>isFunction(x.then);
+
+// use WeakMap to store the object->key mapping
+// so the objects can be garbage collected.
+// WeakMap uses a hashtable under the hood, so the lookup
+// complexity is almost O(1).
+const table = new WeakMap();
+// counter of the key
+let counter = 0;
+// A stable hash implementation that supports:
+// - Fast and ensures unique hash properties
+// - Handles unserializable values
+// - Handles object key ordering
+// - Generates short results
+//
+// This is not a serialization function, and the result is not guaranteed to be
+// parsable.
+const stableHash = (arg)=>{
+    const type = typeof arg;
+    const constructor = arg && arg.constructor;
+    const isDate = constructor == Date;
+    let result;
+    let index;
+    if (OBJECT(arg) === arg && !isDate && constructor != RegExp) {
+        // Object/function, not null/date/regexp. Use WeakMap to store the id first.
+        // If it's already hashed, directly return the result.
+        result = table.get(arg);
+        if (result) return result;
+        // Store the hash first for circular reference detection before entering the
+        // recursive `stableHash` calls.
+        // For other objects like set and map, we use this id directly as the hash.
+        result = ++counter + '~';
+        table.set(arg, result);
+        if (constructor == Array) {
+            // Array.
+            result = '@';
+            for(index = 0; index < arg.length; index++){
+                result += stableHash(arg[index]) + ',';
+            }
+            table.set(arg, result);
+        }
+        if (constructor == OBJECT) {
+            // Object, sort keys.
+            result = '#';
+            const keys = OBJECT.keys(arg).sort();
+            while(!isUndefined(index = keys.pop())){
+                if (!isUndefined(arg[index])) {
+                    result += index + ':' + stableHash(arg[index]) + ',';
+                }
+            }
+            table.set(arg, result);
+        }
+    } else {
+        result = isDate ? arg.toJSON() : type == 'symbol' ? arg.toString() : type == 'string' ? JSON.stringify(arg) : '' + arg;
+    }
+    return result;
+};
+
+// Global state used to deduplicate requests and store listeners
+const SWRGlobalState = new WeakMap();
+
+const EMPTY_CACHE = {};
+const INITIAL_CACHE = {};
+const STR_UNDEFINED = 'undefined';
+// NOTE: Use the function to guarantee it's re-evaluated between jsdom and node runtime for tests.
+const isWindowDefined = typeof window != STR_UNDEFINED;
+const isDocumentDefined = typeof document != STR_UNDEFINED;
+const hasRequestAnimationFrame = ()=>isWindowDefined && typeof window['requestAnimationFrame'] != STR_UNDEFINED;
+const createCacheHelper = (cache, key)=>{
+    const state = SWRGlobalState.get(cache);
+    return [
+        // Getter
+        ()=>!isUndefined(key) && cache.get(key) || EMPTY_CACHE,
+        // Setter
+        (info)=>{
+            if (!isUndefined(key)) {
+                const prev = cache.get(key);
+                // Before writing to the store, we keep the value in the initial cache
+                // if it's not there yet.
+                if (!(key in INITIAL_CACHE)) {
+                    INITIAL_CACHE[key] = prev;
+                }
+                state[5](key, mergeObjects(prev, info), prev || EMPTY_CACHE);
+            }
+        },
+        // Subscriber
+        state[6],
+        // Get server cache snapshot
+        ()=>{
+            if (!isUndefined(key)) {
+                // If the cache was updated on the client, we return the stored initial value.
+                if (key in INITIAL_CACHE) return INITIAL_CACHE[key];
+            }
+            // If we haven't done any client-side updates, we return the current value.
+            return !isUndefined(key) && cache.get(key) || EMPTY_CACHE;
+        }
+    ];
+} // export { UNDEFINED, OBJECT, isUndefined, isFunction, mergeObjects, isPromiseLike }
+;
+
+/**
+ * Due to the bug https://bugs.chromium.org/p/chromium/issues/detail?id=678075,
+ * it's not reliable to detect if the browser is currently online or offline
+ * based on `navigator.onLine`.
+ * As a workaround, we always assume it's online on the first load, and change
+ * the status upon `online` or `offline` events.
+ */ let online = true;
+const isOnline = ()=>online;
+// For node and React Native, `add/removeEventListener` doesn't exist on window.
+const [onWindowEvent, offWindowEvent] = isWindowDefined && window.addEventListener ? [
+    window.addEventListener.bind(window),
+    window.removeEventListener.bind(window)
+] : [
+    noop,
+    noop
+];
+const isVisible = ()=>{
+    const visibilityState = isDocumentDefined && document.visibilityState;
+    return isUndefined(visibilityState) || visibilityState !== 'hidden';
+};
+const initFocus = (callback)=>{
+    // focus revalidate
+    if (isDocumentDefined) {
+        document.addEventListener('visibilitychange', callback);
+    }
+    onWindowEvent('focus', callback);
+    return ()=>{
+        if (isDocumentDefined) {
+            document.removeEventListener('visibilitychange', callback);
+        }
+        offWindowEvent('focus', callback);
+    };
+};
+const initReconnect = (callback)=>{
+    // revalidate on reconnected
+    const onOnline = ()=>{
+        online = true;
+        callback();
+    };
+    // nothing to revalidate, just update the status
+    const onOffline = ()=>{
+        online = false;
+    };
+    onWindowEvent('online', onOnline);
+    onWindowEvent('offline', onOffline);
+    return ()=>{
+        offWindowEvent('online', onOnline);
+        offWindowEvent('offline', onOffline);
+    };
+};
+const preset = {
+    isOnline,
+    isVisible
+};
+const defaultConfigOptions = {
+    initFocus,
+    initReconnect
+};
+
+const IS_REACT_LEGACY = !react__WEBPACK_IMPORTED_MODULE_0__.useId;
+const IS_SERVER = !isWindowDefined || 'Deno' in window;
+// Polyfill requestAnimationFrame
+const rAF = (f)=>hasRequestAnimationFrame() ? window['requestAnimationFrame'](f) : setTimeout(f, 1);
+// React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser.
+const useIsomorphicLayoutEffect = IS_SERVER ? react__WEBPACK_IMPORTED_MODULE_0__.useEffect : react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect;
+// This assignment is to extend the Navigator type to use effectiveType.
+const navigatorConnection = typeof navigator !== 'undefined' && navigator.connection;
+// Adjust the config based on slow connection status (<= 70Kbps).
+const slowConnection = !IS_SERVER && navigatorConnection && ([
+    'slow-2g',
+    '2g'
+].includes(navigatorConnection.effectiveType) || navigatorConnection.saveData);
+
+const serialize = (key)=>{
+    if (isFunction(key)) {
+        try {
+            key = key();
+        } catch (err) {
+            // dependencies not ready
+            key = '';
+        }
+    }
+    // Use the original key as the argument of fetcher. This can be a string or an
+    // array of values.
+    const args = key;
+    // If key is not falsy, or not an empty array, hash it.
+    key = typeof key == 'string' ? key : (Array.isArray(key) ? key.length : key) ? stableHash(key) : '';
+    return [
+        key,
+        args
+    ];
+};
+
+// Global timestamp.
+let __timestamp = 0;
+const getTimestamp = ()=>++__timestamp;
+
+const FOCUS_EVENT = 0;
+const RECONNECT_EVENT = 1;
+const MUTATE_EVENT = 2;
+const ERROR_REVALIDATE_EVENT = 3;
+
+var events = {
+  __proto__: null,
+  ERROR_REVALIDATE_EVENT: ERROR_REVALIDATE_EVENT,
+  FOCUS_EVENT: FOCUS_EVENT,
+  MUTATE_EVENT: MUTATE_EVENT,
+  RECONNECT_EVENT: RECONNECT_EVENT
+};
+
+async function internalMutate(...args) {
+    const [cache, _key, _data, _opts] = args;
+    // When passing as a boolean, it's explicitly used to disable/enable
+    // revalidation.
+    const options = mergeObjects({
+        populateCache: true,
+        throwOnError: true
+    }, typeof _opts === 'boolean' ? {
+        revalidate: _opts
+    } : _opts || {});
+    let populateCache = options.populateCache;
+    const rollbackOnErrorOption = options.rollbackOnError;
+    let optimisticData = options.optimisticData;
+    const rollbackOnError = (error)=>{
+        return typeof rollbackOnErrorOption === 'function' ? rollbackOnErrorOption(error) : rollbackOnErrorOption !== false;
+    };
+    const throwOnError = options.throwOnError;
+    // If the second argument is a key filter, return the mutation results for all
+    // filtered keys.
+    if (isFunction(_key)) {
+        const keyFilter = _key;
+        const matchedKeys = [];
+        const it = cache.keys();
+        for (const key of it){
+            if (// Skip the special useSWRInfinite and useSWRSubscription keys.
+            !/^\$(inf|sub)\$/.test(key) && keyFilter(cache.get(key)._k)) {
+                matchedKeys.push(key);
+            }
+        }
+        return Promise.all(matchedKeys.map(mutateByKey));
+    }
+    return mutateByKey(_key);
+    async function mutateByKey(_k) {
+        // Serialize key
+        const [key] = serialize(_k);
+        if (!key) return;
+        const [get, set] = createCacheHelper(cache, key);
+        const [EVENT_REVALIDATORS, MUTATION, FETCH, PRELOAD] = SWRGlobalState.get(cache);
+        const startRevalidate = ()=>{
+            const revalidators = EVENT_REVALIDATORS[key];
+            const revalidate = isFunction(options.revalidate) ? options.revalidate(get().data, _k) : options.revalidate !== false;
+            if (revalidate) {
+                // Invalidate the key by deleting the concurrent request markers so new
+                // requests will not be deduped.
+                delete FETCH[key];
+                delete PRELOAD[key];
+                if (revalidators && revalidators[0]) {
+                    return revalidators[0](MUTATE_EVENT).then(()=>get().data);
+                }
+            }
+            return get().data;
+        };
+        // If there is no new data provided, revalidate the key with current state.
+        if (args.length < 3) {
+            // Revalidate and broadcast state.
+            return startRevalidate();
+        }
+        let data = _data;
+        let error;
+        // Update global timestamps.
+        const beforeMutationTs = getTimestamp();
+        MUTATION[key] = [
+            beforeMutationTs,
+            0
+        ];
+        const hasOptimisticData = !isUndefined(optimisticData);
+        const state = get();
+        // `displayedData` is the current value on screen. It could be the optimistic value
+        // that is going to be overridden by a `committedData`, or get reverted back.
+        // `committedData` is the validated value that comes from a fetch or mutation.
+        const displayedData = state.data;
+        const currentData = state._c;
+        const committedData = isUndefined(currentData) ? displayedData : currentData;
+        // Do optimistic data update.
+        if (hasOptimisticData) {
+            optimisticData = isFunction(optimisticData) ? optimisticData(committedData, displayedData) : optimisticData;
+            // When we set optimistic data, backup the current committedData data in `_c`.
+            set({
+                data: optimisticData,
+                _c: committedData
+            });
+        }
+        if (isFunction(data)) {
+            // `data` is a function, call it passing current cache value.
+            try {
+                data = data(committedData);
+            } catch (err) {
+                // If it throws an error synchronously, we shouldn't update the cache.
+                error = err;
+            }
+        }
+        // `data` is a promise/thenable, resolve the final data first.
+        if (data && isPromiseLike(data)) {
+            // This means that the mutation is async, we need to check timestamps to
+            // avoid race conditions.
+            data = await data.catch((err)=>{
+                error = err;
+            });
+            // Check if other mutations have occurred since we've started this mutation.
+            // If there's a race we don't update cache or broadcast the change,
+            // just return the data.
+            if (beforeMutationTs !== MUTATION[key][0]) {
+                if (error) throw error;
+                return data;
+            } else if (error && hasOptimisticData && rollbackOnError(error)) {
+                // Rollback. Always populate the cache in this case but without
+                // transforming the data.
+                populateCache = true;
+                // Reset data to be the latest committed data, and clear the `_c` value.
+                set({
+                    data: committedData,
+                    _c: UNDEFINED
+                });
+            }
+        }
+        // If we should write back the cache after request.
+        if (populateCache) {
+            if (!error) {
+                // Transform the result into data.
+                if (isFunction(populateCache)) {
+                    const populateCachedData = populateCache(data, committedData);
+                    set({
+                        data: populateCachedData,
+                        error: UNDEFINED,
+                        _c: UNDEFINED
+                    });
+                } else {
+                    // Only update cached data and reset the error if there's no error. Data can be `undefined` here.
+                    set({
+                        data,
+                        error: UNDEFINED,
+                        _c: UNDEFINED
+                    });
+                }
+            }
+        }
+        // Reset the timestamp to mark the mutation has ended.
+        MUTATION[key][1] = getTimestamp();
+        // Update existing SWR Hooks' internal states:
+        Promise.resolve(startRevalidate()).then(()=>{
+            // The mutation and revalidation are ended, we can clear it since the data is
+            // not an optimistic value anymore.
+            set({
+                _c: UNDEFINED
+            });
+        });
+        // Throw error or return data
+        if (error) {
+            if (throwOnError) throw error;
+            return;
+        }
+        return data;
+    }
+}
+
+const revalidateAllKeys = (revalidators, type)=>{
+    for(const key in revalidators){
+        if (revalidators[key][0]) revalidators[key][0](type);
+    }
+};
+const initCache = (provider, options)=>{
+    // The global state for a specific provider will be used to deduplicate
+    // requests and store listeners. As well as a mutate function that is bound to
+    // the cache.
+    // The provider's global state might be already initialized. Let's try to get the
+    // global state associated with the provider first.
+    if (!SWRGlobalState.has(provider)) {
+        const opts = mergeObjects(defaultConfigOptions, options);
+        // If there's no global state bound to the provider, create a new one with the
+        // new mutate function.
+        const EVENT_REVALIDATORS = {};
+        const mutate = internalMutate.bind(UNDEFINED, provider);
+        let unmount = noop;
+        const subscriptions = {};
+        const subscribe = (key, callback)=>{
+            const subs = subscriptions[key] || [];
+            subscriptions[key] = subs;
+            subs.push(callback);
+            return ()=>subs.splice(subs.indexOf(callback), 1);
+        };
+        const setter = (key, value, prev)=>{
+            provider.set(key, value);
+            const subs = subscriptions[key];
+            if (subs) {
+                for (const fn of subs){
+                    fn(value, prev);
+                }
+            }
+        };
+        const initProvider = ()=>{
+            if (!SWRGlobalState.has(provider)) {
+                // Update the state if it's new, or if the provider has been extended.
+                SWRGlobalState.set(provider, [
+                    EVENT_REVALIDATORS,
+                    {},
+                    {},
+                    {},
+                    mutate,
+                    setter,
+                    subscribe
+                ]);
+                if (!IS_SERVER) {
+                    // When listening to the native events for auto revalidations,
+                    // we intentionally put a delay (setTimeout) here to make sure they are
+                    // fired after immediate JavaScript executions, which can be
+                    // React's state updates.
+                    // This avoids some unnecessary revalidations such as
+                    // https://github.com/vercel/swr/issues/1680.
+                    const releaseFocus = opts.initFocus(setTimeout.bind(UNDEFINED, revalidateAllKeys.bind(UNDEFINED, EVENT_REVALIDATORS, FOCUS_EVENT)));
+                    const releaseReconnect = opts.initReconnect(setTimeout.bind(UNDEFINED, revalidateAllKeys.bind(UNDEFINED, EVENT_REVALIDATORS, RECONNECT_EVENT)));
+                    unmount = ()=>{
+                        releaseFocus && releaseFocus();
+                        releaseReconnect && releaseReconnect();
+                        // When un-mounting, we need to remove the cache provider from the state
+                        // storage too because it's a side-effect. Otherwise, when re-mounting we
+                        // will not re-register those event listeners.
+                        SWRGlobalState.delete(provider);
+                    };
+                }
+            }
+        };
+        initProvider();
+        // This is a new provider, we need to initialize it and setup DOM events
+        // listeners for `focus` and `reconnect` actions.
+        // We might want to inject an extra layer on top of `provider` in the future,
+        // such as key serialization, auto GC, etc.
+        // For now, it's just a `Map` interface without any modifications.
+        return [
+            provider,
+            mutate,
+            initProvider,
+            unmount
+        ];
+    }
+    return [
+        provider,
+        SWRGlobalState.get(provider)[4]
+    ];
+};
+
+// error retry
+const onErrorRetry = (_, __, config, revalidate, opts)=>{
+    const maxRetryCount = config.errorRetryCount;
+    const currentRetryCount = opts.retryCount;
+    // Exponential backoff
+    const timeout = ~~((Math.random() + 0.5) * (1 << (currentRetryCount < 8 ? currentRetryCount : 8))) * config.errorRetryInterval;
+    if (!isUndefined(maxRetryCount) && currentRetryCount > maxRetryCount) {
+        return;
+    }
+    setTimeout(revalidate, timeout, opts);
+};
+const compare = (currentData, newData)=>stableHash(currentData) == stableHash(newData);
+// Default cache provider
+const [cache, mutate] = initCache(new Map());
+// Default config
+const defaultConfig = mergeObjects({
+    // events
+    onLoadingSlow: noop,
+    onSuccess: noop,
+    onError: noop,
+    onErrorRetry,
+    onDiscarded: noop,
+    // switches
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
+    revalidateIfStale: true,
+    shouldRetryOnError: true,
+    // timeouts
+    errorRetryInterval: slowConnection ? 10000 : 5000,
+    focusThrottleInterval: 5 * 1000,
+    dedupingInterval: 2 * 1000,
+    loadingTimeout: slowConnection ? 5000 : 3000,
+    // providers
+    compare,
+    isPaused: ()=>false,
+    cache,
+    mutate,
+    fallback: {}
+}, // use web preset by default
+preset);
+
+const mergeConfigs = (a, b)=>{
+    // Need to create a new object to avoid mutating the original here.
+    const v = mergeObjects(a, b);
+    // If two configs are provided, merge their `use` and `fallback` options.
+    if (b) {
+        const { use: u1, fallback: f1 } = a;
+        const { use: u2, fallback: f2 } = b;
+        if (u1 && u2) {
+            v.use = u1.concat(u2);
+        }
+        if (f1 && f2) {
+            v.fallback = mergeObjects(f1, f2);
+        }
+    }
+    return v;
+};
+
+const SWRConfigContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)({});
+const SWRConfig = (props)=>{
+    const { value } = props;
+    const parentConfig = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(SWRConfigContext);
+    const isFunctionalConfig = isFunction(value);
+    const config = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>isFunctionalConfig ? value(parentConfig) : value, [
+        isFunctionalConfig,
+        parentConfig,
+        value
+    ]);
+    // Extend parent context values and middleware.
+    const extendedConfig = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>isFunctionalConfig ? config : mergeConfigs(parentConfig, config), [
+        isFunctionalConfig,
+        parentConfig,
+        config
+    ]);
+    // Should not use the inherited provider.
+    const provider = config && config.provider;
+    // initialize the cache only on first access.
+    const cacheContextRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(UNDEFINED);
+    if (provider && !cacheContextRef.current) {
+        cacheContextRef.current = initCache(provider(extendedConfig.cache || cache), config);
+    }
+    const cacheContext = cacheContextRef.current;
+    // Override the cache if a new provider is given.
+    if (cacheContext) {
+        extendedConfig.cache = cacheContext[0];
+        extendedConfig.mutate = cacheContext[1];
+    }
+    // Unsubscribe events.
+    useIsomorphicLayoutEffect(()=>{
+        if (cacheContext) {
+            cacheContext[2] && cacheContext[2]();
+            return cacheContext[3];
+        }
+    }, []);
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(SWRConfigContext.Provider, mergeObjects(props, {
+        value: extendedConfig
+    }));
+};
+
+const INFINITE_PREFIX = '$inf$';
+
+// @ts-expect-error
+const enableDevtools = isWindowDefined && window.__SWR_DEVTOOLS_USE__;
+const use = enableDevtools ? window.__SWR_DEVTOOLS_USE__ : [];
+const setupDevTools = ()=>{
+    if (enableDevtools) {
+        // @ts-expect-error
+        window.__SWR_DEVTOOLS_REACT__ = react__WEBPACK_IMPORTED_MODULE_0__;
+    }
+};
+
+const normalize = (args)=>{
+    return isFunction(args[1]) ? [
+        args[0],
+        args[1],
+        args[2] || {}
+    ] : [
+        args[0],
+        null,
+        (args[1] === null ? args[2] : args[1]) || {}
+    ];
+};
+
+const useSWRConfig = ()=>{
+    return mergeObjects(defaultConfig, (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(SWRConfigContext));
+};
+
+const preload = (key_, fetcher)=>{
+    const [key, fnArg] = serialize(key_);
+    const [, , , PRELOAD] = SWRGlobalState.get(cache);
+    // Prevent preload to be called multiple times before used.
+    if (PRELOAD[key]) return PRELOAD[key];
+    const req = fetcher(fnArg);
+    PRELOAD[key] = req;
+    return req;
+};
+const middleware = (useSWRNext)=>(key_, fetcher_, config)=>{
+        // fetcher might be a sync function, so this should not be an async function
+        const fetcher = fetcher_ && ((...args)=>{
+            const [key] = serialize(key_);
+            const [, , , PRELOAD] = SWRGlobalState.get(cache);
+            if (key.startsWith(INFINITE_PREFIX)) {
+                // we want the infinite fetcher to be called.
+                // handling of the PRELOAD cache happens there.
+                return fetcher_(...args);
+            }
+            const req = PRELOAD[key];
+            if (isUndefined(req)) return fetcher_(...args);
+            delete PRELOAD[key];
+            return req;
+        });
+        return useSWRNext(key_, fetcher, config);
+    };
+
+const BUILT_IN_MIDDLEWARE = use.concat(middleware);
+
+// It's tricky to pass generic types as parameters, so we just directly override
+// the types here.
+const withArgs = (hook)=>{
+    return function useSWRArgs(...args) {
+        // Get the default and inherited configuration.
+        const fallbackConfig = useSWRConfig();
+        // Normalize arguments.
+        const [key, fn, _config] = normalize(args);
+        // Merge configurations.
+        const config = mergeConfigs(fallbackConfig, _config);
+        // Apply middleware
+        let next = hook;
+        const { use } = config;
+        const middleware = (use || []).concat(BUILT_IN_MIDDLEWARE);
+        for(let i = middleware.length; i--;){
+            next = middleware[i](next);
+        }
+        return next(key, fn || config.fetcher || null, config);
+    };
+};
+
+// Add a callback function to a list of keyed callback functions and return
+// the unsubscribe function.
+const subscribeCallback = (key, callbacks, callback)=>{
+    const keyedRevalidators = callbacks[key] || (callbacks[key] = []);
+    keyedRevalidators.push(callback);
+    return ()=>{
+        const index = keyedRevalidators.indexOf(callback);
+        if (index >= 0) {
+            // O(1): faster than splice
+            keyedRevalidators[index] = keyedRevalidators[keyedRevalidators.length - 1];
+            keyedRevalidators.pop();
+        }
+    };
+};
+
+// Create a custom hook with a middleware
+const withMiddleware = (useSWR, middleware)=>{
+    return (...args)=>{
+        const [key, fn, config] = normalize(args);
+        const uses = (config.use || []).concat(middleware);
+        return useSWR(key, fn, {
+            ...config,
+            use: uses
+        });
+    };
+};
+
+setupDevTools();
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/swr/dist/core/index.mjs":
+/*!**********************************************!*\
+  !*** ./node_modules/swr/dist/core/index.mjs ***!
+  \**********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SWRConfig: () => (/* binding */ SWRConfig),
+/* harmony export */   "default": () => (/* binding */ useSWR),
+/* harmony export */   mutate: () => (/* reexport safe */ swr_internal__WEBPACK_IMPORTED_MODULE_3__.mutate),
+/* harmony export */   preload: () => (/* reexport safe */ swr_internal__WEBPACK_IMPORTED_MODULE_3__.preload),
+/* harmony export */   unstable_serialize: () => (/* binding */ unstable_serialize),
+/* harmony export */   useSWRConfig: () => (/* reexport safe */ swr_internal__WEBPACK_IMPORTED_MODULE_3__.useSWRConfig)
+/* harmony export */ });
+/* harmony import */ var client_only__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! client-only */ "./node_modules/client-only/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var use_sync_external_store_shim_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! use-sync-external-store/shim/index.js */ "./node_modules/use-sync-external-store/shim/index.js");
+/* harmony import */ var swr_internal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swr/_internal */ "./node_modules/swr/dist/_internal/index.mjs");
+
+
+
+
+
+
+const unstable_serialize = (key)=>(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.serialize)(key)[0];
+
+/// <reference types="react/experimental" />
+const use = react__WEBPACK_IMPORTED_MODULE_1__.use || ((promise)=>{
+    if (promise.status === 'pending') {
+        throw promise;
+    } else if (promise.status === 'fulfilled') {
+        return promise.value;
+    } else if (promise.status === 'rejected') {
+        throw promise.reason;
+    } else {
+        promise.status = 'pending';
+        promise.then((v)=>{
+            promise.status = 'fulfilled';
+            promise.value = v;
+        }, (e)=>{
+            promise.status = 'rejected';
+            promise.reason = e;
+        });
+        throw promise;
+    }
+});
+const WITH_DEDUPE = {
+    dedupe: true
+};
+const useSWRHandler = (_key, fetcher, config)=>{
+    const { cache, compare, suspense, fallbackData, revalidateOnMount, revalidateIfStale, refreshInterval, refreshWhenHidden, refreshWhenOffline, keepPreviousData } = config;
+    const [EVENT_REVALIDATORS, MUTATION, FETCH, PRELOAD] = swr_internal__WEBPACK_IMPORTED_MODULE_3__.SWRGlobalState.get(cache);
+    // `key` is the identifier of the SWR internal state,
+    // `fnArg` is the argument/arguments parsed from the key, which will be passed
+    // to the fetcher.
+    // All of them are derived from `_key`.
+    const [key, fnArg] = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.serialize)(_key);
+    // If it's the initial render of this hook.
+    const initialMountedRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(false);
+    // If the hook is unmounted already. This will be used to prevent some effects
+    // to be called after unmounting.
+    const unmountedRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(false);
+    // Refs to keep the key and config.
+    const keyRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(key);
+    const fetcherRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(fetcher);
+    const configRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(config);
+    const getConfig = ()=>configRef.current;
+    const isActive = ()=>getConfig().isVisible() && getConfig().isOnline();
+    const [getCache, setCache, subscribeCache, getInitialCache] = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.createCacheHelper)(cache, key);
+    const stateDependencies = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)({}).current;
+    const fallback = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(fallbackData) ? config.fallback[key] : fallbackData;
+    const isEqual = (prev, current)=>{
+        for(const _ in stateDependencies){
+            const t = _;
+            if (t === 'data') {
+                if (!compare(prev[t], current[t])) {
+                    if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(prev[t])) {
+                        return false;
+                    }
+                    if (!compare(returnedData, current[t])) {
+                        return false;
+                    }
+                }
+            } else {
+                if (current[t] !== prev[t]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    };
+    const getSnapshot = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>{
+        const shouldStartRequest = (()=>{
+            if (!key) return false;
+            if (!fetcher) return false;
+            // If `revalidateOnMount` is set, we take the value directly.
+            if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(revalidateOnMount)) return revalidateOnMount;
+            // If it's paused, we skip revalidation.
+            if (getConfig().isPaused()) return false;
+            if (suspense) return false;
+            if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(revalidateIfStale)) return revalidateIfStale;
+            return true;
+        })();
+        // Get the cache and merge it with expected states.
+        const getSelectedCache = (state)=>{
+            // We only select the needed fields from the state.
+            const snapshot = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.mergeObjects)(state);
+            delete snapshot._k;
+            if (!shouldStartRequest) {
+                return snapshot;
+            }
+            return {
+                isValidating: true,
+                isLoading: true,
+                ...snapshot
+            };
+        };
+        const cachedData = getCache();
+        const initialData = getInitialCache();
+        const clientSnapshot = getSelectedCache(cachedData);
+        const serverSnapshot = cachedData === initialData ? clientSnapshot : getSelectedCache(initialData);
+        // To make sure that we are returning the same object reference to avoid
+        // unnecessary re-renders, we keep the previous snapshot and use deep
+        // comparison to check if we need to return a new one.
+        let memorizedSnapshot = clientSnapshot;
+        return [
+            ()=>{
+                const newSnapshot = getSelectedCache(getCache());
+                const compareResult = isEqual(newSnapshot, memorizedSnapshot);
+                if (compareResult) {
+                    // Mentally, we should always return the `memorizedSnapshot` here
+                    // as there's no change between the new and old snapshots.
+                    // However, since the `isEqual` function only compares selected fields,
+                    // the values of the unselected fields might be changed. That's
+                    // simply because we didn't track them.
+                    // To support the case in https://github.com/vercel/swr/pull/2576,
+                    // we need to update these fields in the `memorizedSnapshot` too
+                    // with direct mutations to ensure the snapshot is always up-to-date
+                    // even for the unselected fields, but only trigger re-renders when
+                    // the selected fields are changed.
+                    memorizedSnapshot.data = newSnapshot.data;
+                    memorizedSnapshot.isLoading = newSnapshot.isLoading;
+                    memorizedSnapshot.isValidating = newSnapshot.isValidating;
+                    memorizedSnapshot.error = newSnapshot.error;
+                    return memorizedSnapshot;
+                } else {
+                    memorizedSnapshot = newSnapshot;
+                    return newSnapshot;
+                }
+            },
+            ()=>serverSnapshot
+        ];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [
+        cache,
+        key
+    ]);
+    // Get the current state that SWR should return.
+    const cached = (0,use_sync_external_store_shim_index_js__WEBPACK_IMPORTED_MODULE_2__.useSyncExternalStore)((0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)((callback)=>subscribeCache(key, (current, prev)=>{
+            if (!isEqual(prev, current)) callback();
+        }), // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+        cache,
+        key
+    ]), getSnapshot[0], getSnapshot[1]);
+    const isInitialMount = !initialMountedRef.current;
+    const hasRevalidator = EVENT_REVALIDATORS[key] && EVENT_REVALIDATORS[key].length > 0;
+    const cachedData = cached.data;
+    const data = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(cachedData) ? fallback : cachedData;
+    const error = cached.error;
+    // Use a ref to store previously returned data. Use the initial data as its initial value.
+    const laggyDataRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(data);
+    const returnedData = keepPreviousData ? (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(cachedData) ? laggyDataRef.current : cachedData : data;
+    // - Suspense mode and there's stale data for the initial render.
+    // - Not suspense mode and there is no fallback data and `revalidateIfStale` is enabled.
+    // - `revalidateIfStale` is enabled but `data` is not defined.
+    const shouldDoInitialRevalidation = (()=>{
+        // if a key already has revalidators and also has error, we should not trigger revalidation
+        if (hasRevalidator && !(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(error)) return false;
+        // If `revalidateOnMount` is set, we take the value directly.
+        if (isInitialMount && !(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(revalidateOnMount)) return revalidateOnMount;
+        // If it's paused, we skip revalidation.
+        if (getConfig().isPaused()) return false;
+        // Under suspense mode, it will always fetch on render if there is no
+        // stale data so no need to revalidate immediately mount it again.
+        // If data exists, only revalidate if `revalidateIfStale` is true.
+        if (suspense) return (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(data) ? false : revalidateIfStale;
+        // If there is no stale data, we need to revalidate when mount;
+        // If `revalidateIfStale` is set to true, we will always revalidate.
+        return (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(data) || revalidateIfStale;
+    })();
+    // Resolve the default validating state:
+    // If it's able to validate, and it should revalidate when mount, this will be true.
+    const defaultValidatingState = !!(key && fetcher && isInitialMount && shouldDoInitialRevalidation);
+    const isValidating = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(cached.isValidating) ? defaultValidatingState : cached.isValidating;
+    const isLoading = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(cached.isLoading) ? defaultValidatingState : cached.isLoading;
+    // The revalidation function is a carefully crafted wrapper of the original
+    // `fetcher`, to correctly handle the many edge cases.
+    const revalidate = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(async (revalidateOpts)=>{
+        const currentFetcher = fetcherRef.current;
+        if (!key || !currentFetcher || unmountedRef.current || getConfig().isPaused()) {
+            return false;
+        }
+        let newData;
+        let startAt;
+        let loading = true;
+        const opts = revalidateOpts || {};
+        // If there is no ongoing concurrent request, or `dedupe` is not set, a
+        // new request should be initiated.
+        const shouldStartNewRequest = !FETCH[key] || !opts.dedupe;
+        /*
+         For React 17
+         Do unmount check for calls:
+         If key has changed during the revalidation, or the component has been
+         unmounted, old dispatch and old event callbacks should not take any
+         effect
+
+        For React 18
+        only check if key has changed
+        https://github.com/reactwg/react-18/discussions/82
+      */ const callbackSafeguard = ()=>{
+            if (swr_internal__WEBPACK_IMPORTED_MODULE_3__.IS_REACT_LEGACY) {
+                return !unmountedRef.current && key === keyRef.current && initialMountedRef.current;
+            }
+            return key === keyRef.current;
+        };
+        // The final state object when the request finishes.
+        const finalState = {
+            isValidating: false,
+            isLoading: false
+        };
+        const finishRequestAndUpdateState = ()=>{
+            setCache(finalState);
+        };
+        const cleanupState = ()=>{
+            // Check if it's still the same request before deleting it.
+            const requestInfo = FETCH[key];
+            if (requestInfo && requestInfo[1] === startAt) {
+                delete FETCH[key];
+            }
+        };
+        // Start fetching. Change the `isValidating` state, update the cache.
+        const initialState = {
+            isValidating: true
+        };
+        // It is in the `isLoading` state, if and only if there is no cached data.
+        // This bypasses fallback data and laggy data.
+        if ((0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(getCache().data)) {
+            initialState.isLoading = true;
+        }
+        try {
+            if (shouldStartNewRequest) {
+                setCache(initialState);
+                // If no cache is being rendered currently (it shows a blank page),
+                // we trigger the loading slow event.
+                if (config.loadingTimeout && (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(getCache().data)) {
+                    setTimeout(()=>{
+                        if (loading && callbackSafeguard()) {
+                            getConfig().onLoadingSlow(key, config);
+                        }
+                    }, config.loadingTimeout);
+                }
+                // Start the request and save the timestamp.
+                // Key must be truthy if entering here.
+                FETCH[key] = [
+                    currentFetcher(fnArg),
+                    (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.getTimestamp)()
+                ];
+            }
+            [newData, startAt] = FETCH[key];
+            newData = await newData;
+            if (shouldStartNewRequest) {
+                // If the request isn't interrupted, clean it up after the
+                // deduplication interval.
+                setTimeout(cleanupState, config.dedupingInterval);
+            }
+            // If there're other ongoing request(s), started after the current one,
+            // we need to ignore the current one to avoid possible race conditions:
+            //   req1------------------>res1        (current one)
+            //        req2---------------->res2
+            // the request that fired later will always be kept.
+            // The timestamp maybe be `undefined` or a number
+            if (!FETCH[key] || FETCH[key][1] !== startAt) {
+                if (shouldStartNewRequest) {
+                    if (callbackSafeguard()) {
+                        getConfig().onDiscarded(key);
+                    }
+                }
+                return false;
+            }
+            // Clear error.
+            finalState.error = swr_internal__WEBPACK_IMPORTED_MODULE_3__.UNDEFINED;
+            // If there're other mutations(s), that overlapped with the current revalidation:
+            // case 1:
+            //   req------------------>res
+            //       mutate------>end
+            // case 2:
+            //         req------------>res
+            //   mutate------>end
+            // case 3:
+            //   req------------------>res
+            //       mutate-------...---------->
+            // we have to ignore the revalidation result (res) because it's no longer fresh.
+            // meanwhile, a new revalidation should be triggered when the mutation ends.
+            const mutationInfo = MUTATION[key];
+            if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(mutationInfo) && // case 1
+            (startAt <= mutationInfo[0] || // case 2
+            startAt <= mutationInfo[1] || // case 3
+            mutationInfo[1] === 0)) {
+                finishRequestAndUpdateState();
+                if (shouldStartNewRequest) {
+                    if (callbackSafeguard()) {
+                        getConfig().onDiscarded(key);
+                    }
+                }
+                return false;
+            }
+            // Deep compare with the latest state to avoid extra re-renders.
+            // For local state, compare and assign.
+            const cacheData = getCache().data;
+            // Since the compare fn could be custom fn
+            // cacheData might be different from newData even when compare fn returns True
+            finalState.data = compare(cacheData, newData) ? cacheData : newData;
+            // Trigger the successful callback if it's the original request.
+            if (shouldStartNewRequest) {
+                if (callbackSafeguard()) {
+                    getConfig().onSuccess(newData, key, config);
+                }
+            }
+        } catch (err) {
+            cleanupState();
+            const currentConfig = getConfig();
+            const { shouldRetryOnError } = currentConfig;
+            // Not paused, we continue handling the error. Otherwise, discard it.
+            if (!currentConfig.isPaused()) {
+                // Get a new error, don't use deep comparison for errors.
+                finalState.error = err;
+                // Error event and retry logic. Only for the actual request, not
+                // deduped ones.
+                if (shouldStartNewRequest && callbackSafeguard()) {
+                    currentConfig.onError(err, key, currentConfig);
+                    if (shouldRetryOnError === true || (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isFunction)(shouldRetryOnError) && shouldRetryOnError(err)) {
+                        if (!getConfig().revalidateOnFocus || !getConfig().revalidateOnReconnect || isActive()) {
+                            // If it's inactive, stop. It will auto-revalidate when
+                            // refocusing or reconnecting.
+                            // When retrying, deduplication is always enabled.
+                            currentConfig.onErrorRetry(err, key, currentConfig, (_opts)=>{
+                                const revalidators = EVENT_REVALIDATORS[key];
+                                if (revalidators && revalidators[0]) {
+                                    revalidators[0](swr_internal__WEBPACK_IMPORTED_MODULE_3__.revalidateEvents.ERROR_REVALIDATE_EVENT, _opts);
+                                }
+                            }, {
+                                retryCount: (opts.retryCount || 0) + 1,
+                                dedupe: true
+                            });
+                        }
+                    }
+                }
+            }
+        }
+        // Mark loading as stopped.
+        loading = false;
+        // Update the current hook's state.
+        finishRequestAndUpdateState();
+        return true;
+    }, // `setState` is immutable, and `eventsCallback`, `fnArg`, and
+    // `keyValidating` are depending on `key`, so we can exclude them from
+    // the deps array.
+    //
+    // FIXME:
+    // `fn` and `config` might be changed during the lifecycle,
+    // but they might be changed every render like this.
+    // `useSWR('key', () => fetch('/api/'), { suspense: true })`
+    // So we omit the values from the deps array
+    // even though it might cause unexpected behaviors.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [
+        key,
+        cache
+    ]);
+    // Similar to the global mutate but bound to the current cache and key.
+    // `cache` isn't allowed to change during the lifecycle.
+    const boundMutate = (0,react__WEBPACK_IMPORTED_MODULE_1__.useCallback)(// Use callback to make sure `keyRef.current` returns latest result every time
+    (...args)=>{
+        return (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.internalMutate)(cache, keyRef.current, ...args);
+    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    []);
+    // The logic for updating refs.
+    (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(()=>{
+        fetcherRef.current = fetcher;
+        configRef.current = config;
+        // Handle laggy data updates. If there's cached data of the current key,
+        // it'll be the correct reference.
+        if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(cachedData)) {
+            laggyDataRef.current = cachedData;
+        }
+    });
+    // After mounted or key changed.
+    (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(()=>{
+        if (!key) return;
+        const softRevalidate = revalidate.bind(swr_internal__WEBPACK_IMPORTED_MODULE_3__.UNDEFINED, WITH_DEDUPE);
+        // Expose revalidators to global event listeners. So we can trigger
+        // revalidation from the outside.
+        let nextFocusRevalidatedAt = 0;
+        const onRevalidate = (type, opts = {})=>{
+            if (type == swr_internal__WEBPACK_IMPORTED_MODULE_3__.revalidateEvents.FOCUS_EVENT) {
+                const now = Date.now();
+                if (getConfig().revalidateOnFocus && now > nextFocusRevalidatedAt && isActive()) {
+                    nextFocusRevalidatedAt = now + getConfig().focusThrottleInterval;
+                    softRevalidate();
+                }
+            } else if (type == swr_internal__WEBPACK_IMPORTED_MODULE_3__.revalidateEvents.RECONNECT_EVENT) {
+                if (getConfig().revalidateOnReconnect && isActive()) {
+                    softRevalidate();
+                }
+            } else if (type == swr_internal__WEBPACK_IMPORTED_MODULE_3__.revalidateEvents.MUTATE_EVENT) {
+                return revalidate();
+            } else if (type == swr_internal__WEBPACK_IMPORTED_MODULE_3__.revalidateEvents.ERROR_REVALIDATE_EVENT) {
+                return revalidate(opts);
+            }
+            return;
+        };
+        const unsubEvents = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.subscribeCallback)(key, EVENT_REVALIDATORS, onRevalidate);
+        // Mark the component as mounted and update corresponding refs.
+        unmountedRef.current = false;
+        keyRef.current = key;
+        initialMountedRef.current = true;
+        // Keep the original key in the cache.
+        setCache({
+            _k: fnArg
+        });
+        // Trigger a revalidation
+        if (shouldDoInitialRevalidation) {
+            if ((0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(data) || swr_internal__WEBPACK_IMPORTED_MODULE_3__.IS_SERVER) {
+                // Revalidate immediately.
+                softRevalidate();
+            } else {
+                // Delay the revalidate if we have data to return so we won't block
+                // rendering.
+                (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.rAF)(softRevalidate);
+            }
+        }
+        return ()=>{
+            // Mark it as unmounted.
+            unmountedRef.current = true;
+            unsubEvents();
+        };
+    }, [
+        key
+    ]);
+    // Polling
+    (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(()=>{
+        let timer;
+        function next() {
+            // Use the passed interval
+            // ...or invoke the function with the updated data to get the interval
+            const interval = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isFunction)(refreshInterval) ? refreshInterval(getCache().data) : refreshInterval;
+            // We only start the next interval if `refreshInterval` is not 0, and:
+            // - `force` is true, which is the start of polling
+            // - or `timer` is not 0, which means the effect wasn't canceled
+            if (interval && timer !== -1) {
+                timer = setTimeout(execute, interval);
+            }
+        }
+        function execute() {
+            // Check if it's OK to execute:
+            // Only revalidate when the page is visible, online, and not errored.
+            if (!getCache().error && (refreshWhenHidden || getConfig().isVisible()) && (refreshWhenOffline || getConfig().isOnline())) {
+                revalidate(WITH_DEDUPE).then(next);
+            } else {
+                // Schedule the next interval to check again.
+                next();
+            }
+        }
+        next();
+        return ()=>{
+            if (timer) {
+                clearTimeout(timer);
+                timer = -1;
+            }
+        };
+    }, [
+        refreshInterval,
+        refreshWhenHidden,
+        refreshWhenOffline,
+        key
+    ]);
+    // Display debug info in React DevTools.
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useDebugValue)(returnedData);
+    // In Suspense mode, we can't return the empty `data` state.
+    // If there is an `error`, the `error` needs to be thrown to the error boundary.
+    // If there is no `error`, the `revalidation` promise needs to be thrown to
+    // the suspense boundary.
+    if (suspense && (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(data) && key) {
+        // SWR should throw when trying to use Suspense on the server with React 18,
+        // without providing any initial data. See:
+        // https://github.com/vercel/swr/issues/1832
+        if (!swr_internal__WEBPACK_IMPORTED_MODULE_3__.IS_REACT_LEGACY && swr_internal__WEBPACK_IMPORTED_MODULE_3__.IS_SERVER) {
+            throw new Error('Fallback data is required when using suspense in SSR.');
+        }
+        // Always update fetcher and config refs even with the Suspense mode.
+        fetcherRef.current = fetcher;
+        configRef.current = config;
+        unmountedRef.current = false;
+        const req = PRELOAD[key];
+        if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(req)) {
+            const promise = boundMutate(req);
+            use(promise);
+        }
+        if ((0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(error)) {
+            const promise = revalidate(WITH_DEDUPE);
+            if (!(0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(returnedData)) {
+                promise.status = 'fulfilled';
+                promise.value = true;
+            }
+            use(promise);
+        } else {
+            throw error;
+        }
+    }
+    return {
+        mutate: boundMutate,
+        get data () {
+            stateDependencies.data = true;
+            return returnedData;
+        },
+        get error () {
+            stateDependencies.error = true;
+            return error;
+        },
+        get isValidating () {
+            stateDependencies.isValidating = true;
+            return isValidating;
+        },
+        get isLoading () {
+            stateDependencies.isLoading = true;
+            return isLoading;
+        }
+    };
+};
+const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_3__.OBJECT.defineProperty(swr_internal__WEBPACK_IMPORTED_MODULE_3__.SWRConfig, 'defaultValue', {
+    value: swr_internal__WEBPACK_IMPORTED_MODULE_3__.defaultConfig
+});
+/**
+ * A hook to fetch data.
+ *
+ * @link https://swr.vercel.app
+ * @example
+ * ```jsx
+ * import useSWR from 'swr'
+ * function Profile() {
+ *   const { data, error, isLoading } = useSWR('/api/user', fetcher)
+ *   if (error) return <div>failed to load</div>
+ *   if (isLoading) return <div>loading...</div>
+ *   return <div>hello {data.name}!</div>
+ * }
+ * ```
+ */ const useSWR = (0,swr_internal__WEBPACK_IMPORTED_MODULE_3__.withArgs)(useSWRHandler);
+
+
+
 
 /***/ })
 
