@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18bd284289bb3d76b1246f0f8f3fc87c",
+    "content-hash": "6c00e613b57c73aa904ba9b8fabd953f",
     "packages": [
         {
             "name": "eftec/bladeone",
@@ -67,7 +67,7 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "dev-master",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
@@ -83,7 +83,6 @@
                 "eftec/bladeone": "^4.13",
                 "php": ">=7.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -124,9 +123,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wpbones/wpbones": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
