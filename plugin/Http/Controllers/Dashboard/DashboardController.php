@@ -8,6 +8,11 @@ class DashboardController extends Controller
 {
   public function index()
   {
-    return WPKirk()->view('dashboard.index')->withAdminAppsScripts('app', true);
+    return WPKirk()
+      ->view('dashboard.index')
+      ->withLocalizeScripts('app', 'WPKirkMantine', [
+        'nonce' => wp_create_nonce('wp-kirk-mantine'),
+      ])
+      ->withAdminAppsScripts('app', true);
   }
 }

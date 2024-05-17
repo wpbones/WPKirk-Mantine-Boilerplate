@@ -1,4 +1,4 @@
-import { Center, Tabs, Box, Stack, Flex, Group, Grid, Burger, Paper, Container } from '@mantine/core';
+import { Center, Tabs, Box, Stack, Loader, Flex, Group, Grid, Burger, Paper, Container } from '@mantine/core';
 import { DataTable } from 'mantine-datatable';
 import { showNotification } from '@mantine/notifications';
 import { useAjax } from './use-ajax';
@@ -6,22 +6,18 @@ import { useAjax } from './use-ajax';
 import classes from './Demo.module.scss';
 
 export const Demo = () => {
-  const { data, error, isLoading } = useAjax();
-
-  console.log('!!!!', { data, error, isLoading });
-
   return (
     <Center w={'100%'} h={'80dvh'}>
       <Paper p={'md'} radius={'lg'} shadow="md" withBorder w={'50%'}>
         <Stack>
-          <div className={classes.title}>Header</div>
+          <div className={classes.title}>Your Header</div>
 
-          <Tabs orientation="vertical" variant="outline" defaultValue="gallery">
+          <Tabs orientation="vertical" variant="outline" defaultValue="first-tab">
             <Tabs.List>
-              <Tabs.Tab value="gallery">Smart</Tabs.Tab>
+              <Tabs.Tab value="first-tab">First Tab</Tabs.Tab>
             </Tabs.List>
 
-            <Tabs.Panel value="gallery" px="md">
+            <Tabs.Panel value="first-tab" px="md">
               <GettingStartedExample />
             </Tabs.Panel>
           </Tabs>
@@ -32,8 +28,13 @@ export const Demo = () => {
 };
 
 export function GettingStartedExample() {
+  const { data, error, isLoading } = useAjax();
+
+  console.log('!!!!', { data, error, isLoading });
+
   return (
     <DataTable
+      fetching={isLoading}
       height={300}
       withTableBorder
       borderRadius="md"
@@ -41,10 +42,7 @@ export function GettingStartedExample() {
       striped
       highlightOnHover
       // provide data
-      records={[
-        { id: 1, name: 'Joe Biden', bornIn: 1942, party: 'Democratic' },
-        // more records...
-      ]}
+      records={data}
       // define columns
       columns={[
         {

@@ -30,6 +30,28 @@ class MyAjax extends ServiceProvider
    */
   protected $notLogged = ['notLogged'];
 
+  /**
+   * The capability required to execute the action.
+   * Of course, this is only for logged-in users.
+   *
+   * @var string
+   */
+  protected $capability = 'manage_options';
+
+  /**
+   * The nonce key used to verify the request.
+   *
+   * @var string
+   */
+  protected $nonceKey = 'nonce';
+
+  /**
+   * The nonce hash used to verify the request.
+   *
+   * @var string
+   */
+  protected $nonceHash = 'wp-kirk-mantine';
+
   public function trusted()
   {
     $response = 'You have clicked Ajax Trusted';
@@ -39,7 +61,38 @@ class MyAjax extends ServiceProvider
 
   public function logged()
   {
-    $response = 'You have clicked Ajax Logged';
+    $response = [
+      [
+        'id' => 1,
+        'name' => 'Joe Biden',
+        'bornIn' => 1942,
+        'party' => 'Democratic',
+      ],
+      [
+        'id' => 2,
+        'name' => 'Donald Trump',
+        'bornIn' => 1946,
+        'party' => 'Republican',
+      ],
+      [
+        'id' => 3,
+        'name' => 'Barack Obama',
+        'bornIn' => 1961,
+        'party' => 'Democratic',
+      ],
+      [
+        'id' => 4,
+        'name' => 'George W. Bush',
+        'bornIn' => 1946,
+        'party' => 'Republican',
+      ],
+      [
+        'id' => 5,
+        'name' => 'Bill Clinton',
+        'bornIn' => 1946,
+        'party' => 'Democratic',
+      ],
+    ];
 
     wp_send_json($response);
   }

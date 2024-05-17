@@ -5,6 +5,7 @@ const post = async action => {
     method: 'POST',
     body: new URLSearchParams({
       action,
+      nonce: WPKirkMantine.nonce,
     }),
     headers: {
       // form-data url encoded

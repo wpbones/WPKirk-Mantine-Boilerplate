@@ -4556,16 +4556,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Demo = () => {
-  const {
-    data,
-    error,
-    isLoading
-  } = (0,_use_ajax__WEBPACK_IMPORTED_MODULE_2__.useAjax)();
-  console.log('!!!!', {
-    data,
-    error,
-    isLoading
-  });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_4__.Center, {
     w: '100%',
     h: '80dvh'
@@ -4577,19 +4567,30 @@ const Demo = () => {
     w: '50%'
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_6__.Stack, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: _Demo_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].title
-  }, "Header"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs, {
+  }, "Your Header"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs, {
     orientation: "vertical",
     variant: "outline",
-    defaultValue: "gallery"
+    defaultValue: "first-tab"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.List, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.Tab, {
-    value: "gallery"
-  }, "Smart")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.Panel, {
-    value: "gallery",
+    value: "first-tab"
+  }, "First Tab")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_mantine_core__WEBPACK_IMPORTED_MODULE_7__.Tabs.Panel, {
+    value: "first-tab",
     px: "md"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(GettingStartedExample, null))))));
 };
 function GettingStartedExample() {
+  const {
+    data,
+    error,
+    isLoading
+  } = (0,_use_ajax__WEBPACK_IMPORTED_MODULE_2__.useAjax)();
+  console.log('!!!!', {
+    data,
+    error,
+    isLoading
+  });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(mantine_datatable__WEBPACK_IMPORTED_MODULE_1__.DataTable, {
+    fetching: isLoading,
     height: 300,
     withTableBorder: true,
     borderRadius: "md",
@@ -4598,14 +4599,7 @@ function GettingStartedExample() {
     highlightOnHover: true
     // provide data
     ,
-    records: [{
-      id: 1,
-      name: 'Joe Biden',
-      bornIn: 1942,
-      party: 'Democratic'
-    }
-    // more records...
-    ]
+    records: data
     // define columns
     ,
     columns: [{
@@ -4663,7 +4657,8 @@ const post = async action => {
   const res = await fetch(window.ajaxurl, {
     method: 'POST',
     body: new URLSearchParams({
-      action
+      action,
+      nonce: WPKirkMantine.nonce
     }),
     headers: {
       // form-data url encoded
