@@ -1,6 +1,6 @@
-import { Center, Tabs, Box, Stack, Loader, Flex, Group, Grid, Burger, Paper, Container } from '@mantine/core';
-import { DataTable } from 'mantine-datatable';
+import { Box, Center, Paper, Stack, Tabs } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
+import { DataTable } from 'mantine-datatable';
 import { useAjax } from './use-ajax';
 
 import classes from './Demo.module.scss';
@@ -10,9 +10,12 @@ export const Demo = () => {
     <Center w={'100%'} h={'80dvh'}>
       <Paper p={'md'} radius={'lg'} shadow="md" withBorder w={'50%'}>
         <Stack>
-          <div className={classes.title}>Your Header</div>
+          <div className={classes.title}>Your Header (without Router)</div>
 
-          <Tabs orientation="vertical" variant="outline" defaultValue="first-tab">
+          <Tabs
+            orientation="vertical"
+            variant="outline"
+            defaultValue="first-tab">
             <Tabs.List>
               <Tabs.Tab value="first-tab">First Tab</Tabs.Tab>
             </Tabs.List>
