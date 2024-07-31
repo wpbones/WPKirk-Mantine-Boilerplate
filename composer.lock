@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c00e613b57c73aa904ba9b8fabd953f",
+    "content-hash": "61f2113d552c2fbff20f711a17099e18",
     "packages": [
         {
             "name": "eftec/bladeone",
@@ -67,22 +67,23 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "1.4.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "eaec4a601cf47b46195494235a7b19e6027609fc"
+                "reference": "dd5f517c75992b77b078e23122b9f3c539637a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/eaec4a601cf47b46195494235a7b19e6027609fc",
-                "reference": "eaec4a601cf47b46195494235a7b19e6027609fc",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/dd5f517c75992b77b078e23122b9f3c539637a81",
+                "reference": "dd5f517c75992b77b078e23122b9f3c539637a81",
                 "shasum": ""
             },
             "require": {
                 "eftec/bladeone": "^4.13",
                 "php": ">=7.4"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -94,7 +95,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-3.0-only"
+                "LGPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -117,17 +118,19 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-06-13T06:38:58+00:00"
+            "time": "2024-07-31T11:08:07+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wpbones/wpbones": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.3"
+        "php": ">=7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
