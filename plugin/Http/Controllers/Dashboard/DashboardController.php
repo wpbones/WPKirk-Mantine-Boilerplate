@@ -10,9 +10,7 @@ class DashboardController extends Controller
   {
     return WPKirk()
       ->view('dashboard.index')
-      ->withLocalizeScripts('app', 'WPKirkMantine', [
-        'nonce' => wp_create_nonce('wp-kirk-mantine'),
-      ])
-      ->withAdminAppsScripts('app', true);
+      ->withAdminAppsScript('app', true)
+      ->withInlineScript('app', 'const WPKirkMantine = ' . json_encode(['nonce' => wp_create_nonce('wp-kirk-mantine')]) . ';', 'before');
   }
 }

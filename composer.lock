@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61f2113d552c2fbff20f711a17099e18",
+    "content-hash": "dfb4ab0ed239c9d4acc7597b4d4094af",
     "packages": [
         {
             "name": "eftec/bladeone",
@@ -67,23 +67,22 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "dev-master",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "dd5f517c75992b77b078e23122b9f3c539637a81"
+                "reference": "bbf91d32a5a5de3015f55ebb1f27ba6d80ecdf7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/dd5f517c75992b77b078e23122b9f3c539637a81",
-                "reference": "dd5f517c75992b77b078e23122b9f3c539637a81",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/bbf91d32a5a5de3015f55ebb1f27ba6d80ecdf7d",
+                "reference": "bbf91d32a5a5de3015f55ebb1f27ba6d80ecdf7d",
                 "shasum": ""
             },
             "require": {
                 "eftec/bladeone": "^4.13",
                 "php": ">=7.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -100,8 +99,8 @@
             "authors": [
                 {
                     "name": "Giovambattista Fazioli",
-                    "email": "giovambattista.fazioli@gmail.com",
-                    "homepage": "http://undolog.com"
+                    "email": "wpbones.info@gmail.com",
+                    "homepage": "https://wpbones.vercel.app/"
                 }
             ],
             "description": "WordPress framework for Laravel developers",
@@ -118,7 +117,7 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-07-31T11:08:07+00:00"
+            "time": "2024-09-23T14:32:10+00:00"
         }
     ],
     "packages-dev": [],
