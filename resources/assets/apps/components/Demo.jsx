@@ -1,32 +1,32 @@
-import { Box, Center, Paper, Stack, Tabs } from '@mantine/core';
+import { Box, Paper, Stack, Tabs } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
 import { DataTable } from 'mantine-datatable';
 import { useAjax } from './use-ajax';
+
+import { __ } from '@wordpress/i18n';
 
 import classes from './Demo.module.scss';
 
 export const Demo = () => {
   return (
-    <Center w={'100%'} h={'80dvh'}>
-      <Paper p={'md'} radius={'lg'} shadow="md" withBorder w={'50%'}>
-        <Stack>
-          <div className={classes.title}>Your Header (without Router)</div>
+    <Paper p={'md'} radius={'lg'} shadow="md" withBorder w={'100%'}>
+      <Stack>
+        <div className={classes.title}>Your Header (without Router)</div>
 
-          <Tabs
-            orientation="vertical"
-            variant="outline"
-            defaultValue="first-tab">
-            <Tabs.List>
-              <Tabs.Tab value="first-tab">First Tab</Tabs.Tab>
-            </Tabs.List>
+        <Tabs
+          orientation="vertical"
+          variant="outline"
+          defaultValue="first-tab">
+          <Tabs.List>
+            <Tabs.Tab value="first-tab">{__('First Tab', 'wp-kirk')}</Tabs.Tab>
+          </Tabs.List>
 
-            <Tabs.Panel value="first-tab" px="md">
-              <GettingStartedExample />
-            </Tabs.Panel>
-          </Tabs>
-        </Stack>
-      </Paper>
-    </Center>
+          <Tabs.Panel value="first-tab" px="md">
+            <GettingStartedExample />
+          </Tabs.Panel>
+        </Tabs>
+      </Stack>
+    </Paper>
   );
 };
 
