@@ -7,99 +7,71 @@ use WPKirk\WPBones\Foundation\WordPressAjaxServiceProvider as ServiceProvider;
 class MyAjax extends ServiceProvider
 {
   /**
-   * List of the ajax actions executed by both logged and not logged users.
-   * Here you will use a methods list.
+   * Ajax actions available to both logged and not-logged users.
+   * The boilerplate only needs logged-in endpoints, so this is empty.
    *
    * @var array
    */
-  protected $trusted = ['trusted'];
+  protected $trusted = [];
 
   /**
-   * List of the ajax actions executed only by logged-in users.
-   * Here you will use a methods list.
+   * Ajax actions available only to logged-in users with $capability.
    *
    * @var array
    */
-  protected $logged = ['logged'];
+  protected $logged = ['users'];
 
   /**
-   * List of the ajax actions executed only by not logged-in user, usually from frontend.
-   * Here you will use a methods list.
+   * Ajax actions available only to not-logged-in users (typically frontend).
    *
    * @var array
    */
-  protected $notLogged = ['notLogged'];
+  protected $notLogged = [];
 
   /**
-   * The capability required to execute the action.
-   * Of course, this is only for logged-in users.
+   * Capability required to invoke logged-in actions.
    *
    * @var string
    */
   protected $capability = 'manage_options';
 
   /**
-   * The nonce key used to verify the request.
+   * Expected request field that carries the nonce.
    *
    * @var string
    */
   protected $nonceKey = 'nonce';
 
   /**
-   * The nonce hash used to verify the request.
+   * Nonce hash used for verification. Must match the hash used by
+   * Controllers when they inject the nonce into the page via
+   * `withInlineScript('dashboard', 'const WPKirkMantine = ...')`.
    *
    * @var string
    */
   protected $nonceHash = 'wp-kirk-mantine';
 
-  public function trusted()
+  /**
+   * Return a small list of real WordPress users for the DataTable demo.
+   * Shaped to match the WPUser interface in the React code.
+   */
+  public function users()
   {
-    $response = 'You have clicked Ajax Trusted';
+    $users = get_users([
+      'number'  => 10,
+      'orderby' => 'ID',
+      'order'   => 'ASC',
+    ]);
 
-    wp_send_json($response);
-  }
-
-  public function logged()
-  {
-    $response = [
-      [
-        'id' => 1,
-        'name' => 'Joe Biden',
-        'bornIn' => 1942,
-        'party' => 'Democratic',
-      ],
-      [
-        'id' => 2,
-        'name' => 'Donald Trump',
-        'bornIn' => 1946,
-        'party' => 'Republican',
-      ],
-      [
-        'id' => 3,
-        'name' => 'Barack Obama',
-        'bornIn' => 1961,
-        'party' => 'Democratic',
-      ],
-      [
-        'id' => 4,
-        'name' => 'George W. Bush',
-        'bornIn' => 1946,
-        'party' => 'Republican',
-      ],
-      [
-        'id' => 5,
-        'name' => 'Bill Clinton',
-        'bornIn' => 1946,
-        'party' => 'Democratic',
-      ],
-    ];
-
-    wp_send_json($response);
-  }
-
-  public function notLogged()
-  {
-    $response = 'You have clicked Ajax notLogged';
+    $response = array_map(function ($user) {
+      $roles = $user->roles;
+      return [
+        'id'    => (int) $user->ID,
+        'name'  => $user->display_name,
+        'email' => $user->user_email,
+        'role'  => isset($roles[0]) ? $roles[0] : 'subscriber',
+      ];
+    }, $users);
 
     wp_send_json($response);
   }
