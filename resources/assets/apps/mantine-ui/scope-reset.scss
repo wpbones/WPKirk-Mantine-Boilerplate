@@ -1,10 +1,13 @@
-// Mantine's global reset (@mantine/core/styles.css) applies `font-size` and
-// `font-family` to `body`, which leaks into the surrounding WP admin UI.
-// Restore WP admin defaults on `body` — Mantine components use their own
-// classes with explicit sizing, so they keep their look inside `#mantine-ui-root`.
+// Mantine's global reset (`@mantine/core/styles.css`) applies typography
+// AND colors to `body` via `--mantine-color-text`, `--mantine-color-body`
+// and friends, which leaks into the surrounding WP admin UI. Restore WP
+// admin defaults on `body` — Mantine components use their own classes
+// with explicit styling, so they keep their look inside `#mantine-ui-root`.
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     'Helvetica Neue', sans-serif;
   font-size: 13px;
   line-height: 1.4em;
+  color: #3c434a;
+  background-color: #f0f0f1;
 }

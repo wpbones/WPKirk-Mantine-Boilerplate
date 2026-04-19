@@ -16,6 +16,6 @@ class DashboardController extends Controller
       ->withAdminScript('prism')
       ->withAdminStyle('wp-kirk-common')
       ->withAdminAppsScript('mantine-ui', true)
-      ->withInlineScript('mantine-ui', 'window.WPKirkMantine = ' . json_encode(['nonce' => $nonce]) . ';', 'before');
+      ->withInlineScript('mantine-ui', 'window.WPKirkMantine = ' . wp_json_encode(['nonce' => $nonce]) . ';', 'before');
   }
 }

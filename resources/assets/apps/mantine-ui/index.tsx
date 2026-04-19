@@ -34,10 +34,14 @@ const ColorSchemeToggle = () => {
   );
 };
 
+// WP admin bar sits at z-index 99999 and Mantine's own scale tops out at
+// `--mantine-z-index-max` (9999). Notifications need to render above both.
+const NOTIFICATIONS_Z_INDEX = 100000;
+
 const App = () => {
   return (
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <Notifications position="bottom-right" zIndex={999999} />
+      <Notifications position="bottom-right" zIndex={NOTIFICATIONS_Z_INDEX} />
       <ModalsProvider>
         <Container size="lg" py="md">
           <Group justify="space-between" mb="md">
