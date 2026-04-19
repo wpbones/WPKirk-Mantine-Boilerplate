@@ -8,12 +8,14 @@ class DashboardController extends Controller
 {
   public function index()
   {
+    $nonce = wp_create_nonce('wp-kirk-mantine');
+
     return WPKirk()
       ->view('dashboard.index')
       ->withAdminStyle('prism')
       ->withAdminScript('prism')
       ->withAdminStyle('wp-kirk-common')
-      ->withAdminAppsScript('app', true)
-      ->withInlineScript('app', 'const WPKirkMantine = ' . json_encode(['nonce' => wp_create_nonce('wp-kirk-mantine')]) . ';', 'before');
+      ->withAdminAppsScript('mantine-ui', true)
+      ->withInlineScript('mantine-ui', 'const WPKirkMantine = ' . json_encode(['nonce' => $nonce]) . ';', 'before');
   }
 }
