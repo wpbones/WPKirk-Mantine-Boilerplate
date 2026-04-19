@@ -81,7 +81,7 @@ const App = () => {
   );
 };
 
-const container = document.getElementById('dashboard-root');
+const container = document.getElementById('mantine-ui-root');
 if (container) {
   createRoot(container).render(<App />);
 }
