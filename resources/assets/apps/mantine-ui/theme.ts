@@ -19,4 +19,11 @@ export const theme = createTheme({
   colors: { wpBlue },
   defaultRadius: 'md',
   cursorType: 'pointer',
+  scale: 0.85,
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+  headings: {
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+  },
 });

@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import 'mantine-datatable/styles.css';
+import './scope-reset.scss';
 
 import {
   ActionIcon,
@@ -36,11 +37,13 @@ const ColorSchemeToggle = () => {
 const App = () => {
   return (
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <Notifications position="top-right" />
+      <Notifications position="bottom-right" zIndex={999999} />
       <ModalsProvider>
         <Container size="lg" py="md">
           <Group justify="space-between" mb="md">
-            <Title order={2}>{__('Mantine Boilerplate', 'wp-kirk')}</Title>
+            <Title order={2} c="var(--mantine-color-text)">
+              {__('Mantine Boilerplate', 'wp-kirk')}
+            </Title>
             <ColorSchemeToggle />
           </Group>
 
