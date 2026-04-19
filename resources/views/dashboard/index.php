@@ -15,31 +15,31 @@
 
     <?php wpkirk_section(__('Live Demo', 'wp-kirk')); ?>
 
-    <div id="dashboard-root"></div>
+    <div id="mantine-ui-root"></div>
 
     <?php wpkirk_section(__('Package.json', 'wp-kirk')); ?>
     <?php wpkirk_code('@/package.json'); ?>
 
     <?php wpkirk_section(__('React Entry Point', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/index.tsx'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/index.tsx'); ?>
 
     <?php wpkirk_section(__('Theme', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/theme.ts'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/theme.ts'); ?>
 
     <?php wpkirk_section(__('AJAX Hook (SWR + typed)', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/use-ajax.ts'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/use-ajax.ts'); ?>
 
     <?php wpkirk_section(__('Form Tab', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/FormTab.tsx'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/FormTab.tsx'); ?>
 
     <?php wpkirk_section(__('Table Tab', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/TableTab.tsx'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/TableTab.tsx'); ?>
 
     <?php wpkirk_section(__('Modals Tab', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/ModalsTab.tsx'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/ModalsTab.tsx'); ?>
 
     <?php wpkirk_section(__('Notifications Tab', 'wp-kirk')); ?>
-    <?php wpkirk_code('@/resources/assets/apps/dashboard/NotificationsTab.tsx'); ?>
+    <?php wpkirk_code('@/resources/assets/apps/mantine-ui/NotificationsTab.tsx'); ?>
 
     <?php wpkirk_section(__('Controller', 'wp-kirk')); ?>
     <?php wpkirk_code('@/plugin/Http/Controllers/Dashboard/DashboardController.php'); ?>
