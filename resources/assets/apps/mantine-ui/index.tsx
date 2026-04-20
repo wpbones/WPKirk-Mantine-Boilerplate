@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import 'mantine-datatable/styles.css';
+import './scope-reset.scss';
 
 import {
   ActionIcon,
@@ -33,14 +34,20 @@ const ColorSchemeToggle = () => {
   );
 };
 
+// WP admin bar sits at z-index 99999 and Mantine's own scale tops out at
+// `--mantine-z-index-max` (9999). Notifications need to render above both.
+const NOTIFICATIONS_Z_INDEX = 100000;
+
 const App = () => {
   return (
     <MantineProvider theme={theme} defaultColorScheme="auto">
-      <Notifications position="top-right" />
+      <Notifications position="bottom-right" zIndex={NOTIFICATIONS_Z_INDEX} />
       <ModalsProvider>
         <Container size="lg" py="md">
           <Group justify="space-between" mb="md">
-            <Title order={2}>{__('Mantine Boilerplate', 'wp-kirk')}</Title>
+            <Title order={2} c="var(--mantine-color-text)">
+              {__('Mantine Boilerplate', 'wp-kirk')}
+            </Title>
             <ColorSchemeToggle />
           </Group>
 

@@ -14,9 +14,19 @@ const wpBlue: MantineColorsTuple = [
   '#0050b8',
 ];
 
+// Mantine's default base font-size is 16px while WP admin uses 13px.
+// `scale: 0.85` brings Mantine components down to ~13.6px so buttons,
+// inputs and labels visually match the surrounding WP admin density.
 export const theme = createTheme({
   primaryColor: 'wpBlue',
   colors: { wpBlue },
   defaultRadius: 'md',
   cursorType: 'pointer',
+  scale: 0.85,
+  fontFamily:
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+  headings: {
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+  },
 });
