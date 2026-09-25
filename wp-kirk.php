@@ -4,7 +4,7 @@
  * Plugin Name: WP Kirk Mantine Boilerplate
  * Plugin URI: https://github.com/wpbones/WPKirk-Mantine-Boilerplate
  * Description: WP Bones template WordPress plugin
- * Version: 2.0.12
+ * Version: 2.1.0
  * Requires at least: 6.6
  * Requires PHP: 8.1
  * Author: Giovambattista Fazioli
