@@ -15,7 +15,14 @@ import {
 } from '@mantine/core';
 import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
-import { IconBell, IconForms, IconMoon, IconSun, IconTable, IconWindowMaximize } from '@tabler/icons-react';
+import {
+  IconBell,
+  IconForms,
+  IconMoon,
+  IconSun,
+  IconTable,
+  IconWindowMaximize,
+} from '@tabler/icons-react';
 import { createRoot } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
@@ -28,7 +35,12 @@ import { theme } from './theme';
 const ColorSchemeToggle = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   return (
-    <ActionIcon variant="default" size="lg" onClick={toggleColorScheme} aria-label="Toggle color scheme">
+    <ActionIcon
+      variant="default"
+      size="lg"
+      onClick={toggleColorScheme}
+      aria-label="Toggle color scheme"
+    >
       {colorScheme === 'dark' ? <IconSun size={18} /> : <IconMoon size={18} />}
     </ActionIcon>
   );

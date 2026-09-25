@@ -24,7 +24,9 @@ export const ModalsTab = () => {
   const openAlert = () =>
     modals.open({
       title: __('Alert', 'wp-kirk'),
-      children: <Text size="sm">{__('Any Mantine component can be rendered inside.', 'wp-kirk')}</Text>,
+      children: (
+        <Text size="sm">{__('Any Mantine component can be rendered inside.', 'wp-kirk')}</Text>
+      ),
     });
 
   return (

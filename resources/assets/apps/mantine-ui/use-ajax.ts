@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-const fetcher = async <T,>(action: string): Promise<T> => {
+const fetcher = async <T>(action: string): Promise<T> => {
   const body = new URLSearchParams({
     action,
     nonce: window.WPKirkMantine.nonce,

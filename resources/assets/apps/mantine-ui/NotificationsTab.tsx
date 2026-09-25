@@ -9,13 +9,22 @@ export const NotificationsTab = () => {
   return (
     <Stack gap="md">
       <Group>
-        <Button color="green" onClick={() => show('green', __('Success', 'wp-kirk'), __('All good.', 'wp-kirk'))}>
+        <Button
+          color="green"
+          onClick={() => show('green', __('Success', 'wp-kirk'), __('All good.', 'wp-kirk'))}
+        >
           {__('Success', 'wp-kirk')}
         </Button>
-        <Button color="yellow" onClick={() => show('yellow', __('Warning', 'wp-kirk'), __('Careful now.', 'wp-kirk'))}>
+        <Button
+          color="yellow"
+          onClick={() => show('yellow', __('Warning', 'wp-kirk'), __('Careful now.', 'wp-kirk'))}
+        >
           {__('Warning', 'wp-kirk')}
         </Button>
-        <Button color="red" onClick={() => show('red', __('Error', 'wp-kirk'), __('Something broke.', 'wp-kirk'))}>
+        <Button
+          color="red"
+          onClick={() => show('red', __('Error', 'wp-kirk'), __('Something broke.', 'wp-kirk'))}
+        >
           {__('Error', 'wp-kirk')}
         </Button>
       </Group>
